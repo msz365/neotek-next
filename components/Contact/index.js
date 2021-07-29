@@ -152,7 +152,7 @@ const Contact = ({
                 {/* <Img src={img} alt={alt} />  */}
                 <iframe
                   title="Google Maps"
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13292.504553073028!2d73.1503933!3d33.6020315!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd6c434343b921e42!2sCloud%20Emporium!5e0!3m2!1sen!2s!4v1619278618172!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7670703103813!2d73.08881451520288!3d33.585396580735505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzA3LjQiTiA3M8KwMDUnMjcuNiJF!5e0!3m2!1sen!2s!4v1627585247818!5m2!1sen!2s"
                   height="100%"
                   style={{ border: 0, height: "480px", width: "300px" }}
                   allowFullScreen=""
