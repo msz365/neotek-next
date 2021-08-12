@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkR } from "next/link";
 import { Link as LinkS } from "react-scroll";
+import Image from "next/image";
+import logo from "../../public/neotek-logo-small.png";
 
 const SidebarContainer = styled.aside`
   position: fixed;
@@ -23,6 +25,7 @@ const SidebarMenu = styled.ul`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
   text-align: center;
+  margin-left: -30px;
 
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
@@ -47,7 +50,7 @@ const SidebarWrapper = styled.div`
   color: #fff;
 `;
 
-const SidebarLink = styled(LinkS)`
+const SidebarLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +96,18 @@ const SidebarRoute = styled.a`
     }
 `;
 
+const NavLogo = styled.a`
+  color: #fff;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-weight: bold;
+  text-decoration: none;
+`;
+
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -100,17 +115,23 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
+        <NavLogo href="/">
+          <Image src={logo} height="60px" width="60px" alt="logo" />
+        </NavLogo>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink href="/" onClick={toggle}>
+            Home
+          </SidebarLink>
+          <SidebarLink href="/about" onClick={toggle}>
             About
           </SidebarLink>
-          <SidebarLink to="products" onClick={toggle}>
+          <SidebarLink href="/products" onClick={toggle}>
             Products
           </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
+          <SidebarLink href="/services" onClick={toggle}>
             Services
           </SidebarLink>
-          <SidebarLink to="contact" onClick={toggle}>
+          <SidebarLink href="/contact" onClick={toggle}>
             Contact
           </SidebarLink>
           {/* <SidebarLink to='signup' onClick={toggle}>Sign Up</SidebarLink> */}

@@ -1,19 +1,19 @@
-import { ButtonR } from "../ButtonRElement";
+import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
-import Link from "next/link";
 
-const InfoContainer = styled.div`
-  background: ${({ lightBg }) => (lightBg ? "#e3e3e3" : "#650004")};
-  padding: 100px 0;
+const ContactContainer = styled.div`
+  color: #fff;
+  background: ${({ lightBg }) => (lightBg ? "#e3e3e3" : "#962428")};
+
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `;
 
-const InfoWrapper = styled.div`
+const ContactWrapper = styled.div`
   display: grid;
   z-index: 1;
+  height: 860px;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
@@ -21,7 +21,7 @@ const InfoWrapper = styled.div`
   justify-content: center;
 `;
 
-const InfoRow = styled.div`
+const ContactRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -76,7 +76,7 @@ const Heading = styled.h1`
 
 const Subtitle = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "#650004" : "#fff")};
@@ -90,6 +90,10 @@ const BtnWrap = styled.div`
 const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+
+  &.iframe {
+    height: 600px;
+  }
 `;
 
 const Img = styled.img`
@@ -98,7 +102,7 @@ const Img = styled.img`
   padding-right: 0;
 `;
 
-const InfoSection = ({
+const ContactForm = ({
   lightBg,
   id,
   imgStart,
@@ -113,56 +117,52 @@ const InfoSection = ({
   primary,
   dark,
   dark2,
-  noButton,
+  email,
+  phone,
 }) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
+      <ContactContainer lightBg={lightBg} id={id}>
+        <ContactWrapper>
+          <ContactRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine lightText={lightText}>{topLine}</TopLine>
+                <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline} </Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                {noButton ? (
-                  <div></div>
-                ) : (
-                  <BtnWrap>
-                    <Link href="/about" passHref>
-                      <ButtonR
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        // exact={true}
-                        offset={-80}
-                        primary={primary ? 1 : 0}
-                        dark={dark ? 1 : 0}
-                        dark2={dark2 ? 1 : 0}
-                      >
-                        {buttonLabel}
-                      </ButtonR>
-                    </Link>
-                  </BtnWrap>
-                )}
+                <Subtitle darkText={darkText}>Email: {email}</Subtitle>
+                <Subtitle darkText={darkText}>Phone: {phone}</Subtitle>
+                {/* <BtnWrap>
+                                <Button to='products' smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact={true} 
+                                offset={-80}
+                                primary={primary ? 1 : 0}
+                                dark={dark ? 1 : 0}
+                                dark2={dark2 ? 1 : 0}
+                                >{buttonLabel}</Button>
+                            </BtnWrap> */}
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
-                <Image
-                  src={img}
-                  alt={alt}
-                  layout="responsive"
-                  width={150}
-                  height={150}
-                />
+                {/* <Img src={img} alt={alt} />  */}
+                <iframe
+                  title="Neotek Head Office"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7670703103813!2d73.08881451520288!3d33.585396580735505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzA3LjQiTiA3M8KwMDUnMjcuNiJF!5e0!3m2!1sen!2s!4v1627585247818!5m2!1sen!2s"
+                  height="100%"
+                  style={{ border: 0, height: "480px", width: "300px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                ></iframe>
               </ImgWrap>
             </Column2>
-          </InfoRow>
-        </InfoWrapper>
-      </InfoContainer>
+          </ContactRow>
+        </ContactWrapper>
+      </ContactContainer>
     </>
   );
 };
 
-export default InfoSection;
+export default ContactForm;

@@ -5,8 +5,9 @@ import { animateScroll as scroll } from "react-scroll";
 import logo from "../../public/Logo.png";
 import styled from "styled-components";
 import { Link } from "next/link";
-import { Link as LinkS } from "react-scroll";
 import Image from "next/image";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import Dropdown from "./Dropdown";
 
 const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? "#333333" : "transparent")};
@@ -87,7 +88,7 @@ const NavItem = styled.li`
   height: 80px;
 `;
 
-const NavLinks = styled(LinkS)`
+const NavLinks = styled.a`
   color: #fff;
   display: flex;
   align-items: center;
@@ -118,7 +119,7 @@ const NavBtnLink = styled.a`
   color: #fff;
   font-size: 1rem;
   outline: none;
-  border: none;
+  border: 1px solid #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -127,11 +128,13 @@ const NavBtnLink = styled.a`
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #650004;
+    border: 1px solid #650004;
   }
 `;
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -148,12 +151,30 @@ const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 600) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+    console.log(dropdown);
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 600) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
+
   return (
     <>
       <IconContext.Provider value={{}}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
+            <NavLogo href="/" onClick={toggleHome}>
               <Image src={logo} alt="Neotek" height="45px" width="150px" />
             </NavLogo>
             <MobileIcon onClick={toggle}>
@@ -162,7 +183,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="about"
+                  href="/about"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -172,9 +193,9 @@ const Navbar = ({ toggle }) => {
                   About
                 </NavLinks>
               </NavItem>
-              <NavItem>
+              <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <NavLinks
-                  to="products"
+                  href="/products"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -182,11 +203,13 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                 >
                   Products
+                  <RiArrowDropDownLine style={{ fontSize: "1.8rem" }} />
                 </NavLinks>
+                {dropdown && <Dropdown />}
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="services"
+                  href="/services"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -198,7 +221,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="contact"
+                  href="/contact"
                   smooth={true}
                   duration={500}
                   spy={true}

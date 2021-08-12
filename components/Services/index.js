@@ -6,22 +6,24 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const ServicesContainer = styled.div`
-  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #333333;
-
+  padding: 100px 0;
   @media screen and (max-width: 1000px) {
-    height: 1000px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
   @media screen and (max-width: 768px) {
-    height: 1200px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1250px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 `;
 

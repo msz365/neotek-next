@@ -15,7 +15,6 @@ const ContactWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 860px;
-  width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
@@ -151,7 +150,7 @@ const Contact = ({
               <ImgWrap>
                 {/* <Img src={img} alt={alt} />  */}
                 <iframe
-                  title="Google Maps"
+                  title="Neotek Head Office"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7670703103813!2d73.08881451520288!3d33.585396580735505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzA3LjQiTiA3M8KwMDUnMjcuNiJF!5e0!3m2!1sen!2s!4v1627585247818!5m2!1sen!2s"
                   height="100%"
                   style={{ border: 0, height: "480px", width: "300px" }}

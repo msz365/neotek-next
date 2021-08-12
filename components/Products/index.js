@@ -14,23 +14,26 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const ProductsContainer = styled.div`
-  height: 1800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #560004;
+  padding: 100px 0;
 
   @media screen and (max-width: 1000px) {
-    height: 2300px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 
   @media screen and (max-width: 768px) {
-    height: 3700px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 4200px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 `;
 
@@ -110,10 +113,8 @@ const Products = () => {
         <ProductsWrapper>
           <ProductsCard>
             <ProductCardLink
-              href="//www.thermofisher.com/search/browse/category/pk/en/90150354/chemical+detection"
-              target="_blank"
+              href="/products/thermo"
               aria-label="Thermo Fisher Chemical Detection"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon1} />
               <ProductsH2>Safety & Security Portfolio</ProductsH2>
@@ -124,10 +125,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//www.perkinelmer.com/product/lactoscope-ft-a-liquid-dairy-products-analyzer-lafta"
-              target="_blank"
+              href="/products/perkin"
               aria-label="Perkin Elmer Dairy and Atomic Absorption"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon2} />
               <ProductsH2>Atomic Absorption & Dairy Analysis</ProductsH2>
@@ -138,10 +137,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//www.perkinelmer.com/category/food-safety-quality"
-              target="_blank"
+              href="/products/perkin"
               aria-label="Perten Dough and Grain Analyzers"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon3} />
               <ProductsH2>Dough & Grain Analysers</ProductsH2>
@@ -152,12 +149,7 @@ const Products = () => {
             </ProductCardLink>
           </ProductsCard>
           <ProductsCard>
-            <ProductCardLink
-              href="//www.onqsoft.com.au/best-lims-qlims/"
-              target="_blank"
-              aria-label="LIMS"
-              rel="noreferrer"
-            >
+            <ProductCardLink href="/products/qlims" aria-label="LIMS">
               <Image alt="" src={Icon4} />
               <ProductsH2>Laboratory Information Management System</ProductsH2>
               <ProductsP>
@@ -168,10 +160,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//us.vwr.com/store/"
-              target="_blank"
+              href="/products/vwr"
               aria-label="VWR Consumables Reagents and Chemicals"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon5} />
               <ProductsH2>A Complete Spectrum</ProductsH2>
@@ -181,27 +171,11 @@ const Products = () => {
               </ProductsP>
             </ProductCardLink>
           </ProductsCard>
+
           <ProductsCard>
             <ProductCardLink
-              href="//www.spectrum-cn.cn/Products?_l=en"
-              target="_blank"
-              aria-label="Spectrum Atomic Absorption and UV-Vis"
-              rel="noreferrer"
-            >
-              <Image alt="" src={Icon6} />
-              <ProductsH2>Spectrophotometery on a Budget</ProductsH2>
-              <ProductsP>
-                Superior Quality at a Great Price. Atomic Absorption & UV-Vis
-                provide a Budget Friendly Alternate
-              </ProductsP>
-            </ProductCardLink>
-          </ProductsCard>
-          <ProductsCard>
-            <ProductCardLink
-              href="//sps.honeywell.com/us/en/products/safety/gas-and-flame-detection/portables"
-              target="_blank"
+              href="/products/honeywell"
               aria-label="Honeywell Gas Detection"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon7} />
               <ProductsH2>Gas Detection Portfolio</ProductsH2>
@@ -213,10 +187,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//www.myscada.org/products/"
-              target="_blank"
+              href="/products/myscada"
               aria-label="mySCADA Automation"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon8} />
               <ProductsH2>Industrial Automation</ProductsH2>
@@ -228,10 +200,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//www.isystems-group.com/solutions/pharmaceutical-life-sciences/"
-              target="_blank"
+              href="/products/isystems"
               aria-label="Micorosoft ERP"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon9} />
               <ProductsH2>Enterprise Resource Planning</ProductsH2>
@@ -243,10 +213,8 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink
-              href="//www.gester-instruments.com/"
-              target="_blank"
+              href="/products/gester"
               aria-label="GESTER Testing"
-              rel="noreferrer"
             >
               <Image alt="" src={Icon10} />
               <ProductsH2>Testing Equipment for Various Industries</ProductsH2>
@@ -256,12 +224,7 @@ const Products = () => {
             </ProductCardLink>
           </ProductsCard>
           <ProductsCard>
-            <ProductCardLink
-              href="//galvanoscientific.com/products/"
-              target="_blank"
-              aria-label="Galvano"
-              rel="noreferrer"
-            >
+            <ProductCardLink href="/products/galvano" aria-label="Galvano">
               <Image alt="" src={Icon11} />
               <ProductsH2>Quality Control for Pharma</ProductsH2>
               <ProductsP>

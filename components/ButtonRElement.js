@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
+import Link from "next/link";
 
-export const Button = styled(LinkS)`
+export const ButtonR = styled.a`
   border-radius: 50px;
   background: ${({ primary }) => (primary ? "#650004" : "#fff")};
   white-space: nowrap;
@@ -11,6 +11,7 @@ export const Button = styled(LinkS)`
   outline: none;
   border: 1px solid ${({ dark }) => (dark ? "#fff" : "#650004")};
   cursor: pointer;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;

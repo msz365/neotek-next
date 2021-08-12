@@ -5,8 +5,7 @@ export const homeObjThree = {
   lightTextDesc: false,
   topLine: "Get In Tocuh",
   headline: "Our team is always ready to assist",
-  description:
-    "House # 142, Street 12, Chaklala Scheme III, Rawalpindi -PAKISTAN",
+  description: "142, Street 12, Chaklala Scheme III, Rawalpindi, Pakistan",
   email: "info@neotek.com.pk",
   phone: "‎+92 51 8311621 / +923 111 444 226",
   buttonLabel: "Contact Us",

@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const InfoContainer = styled.div`
-  background: ${({ lightBg }) => (lightBg ? "#e3e3e3" : "#650004")};
-  padding: 100px 0;
+  background: ${({ lightBg }) =>
+    lightBg
+      ? "linear-gradient(180deg, hsla(0, 0%, 20%, 0.7) 0%, hsla(0, 0%, 89%, 1) 10%)"
+      : "#650004"};
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+  
   }
 `;
 
@@ -17,7 +19,7 @@ const InfoWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  padding: 110px 24px;
   justify-content: center;
 `;
 
@@ -30,7 +32,7 @@ const InfoRow = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+      imgStart ? `'col2' 'col1'` : `'col1 col1' 'col2 col2'`};
   }
 `;
 
@@ -98,7 +100,30 @@ const Img = styled.img`
   padding-right: 0;
 `;
 
-const InfoSection = ({
+const Tag = styled.p`
+  border-radius: 5px;
+  background: #333333;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 40px" : "12px 20px")};
+  color: ${({ dark }) => (dark ? "#fff" : "#650004")};
+  font-size: ${({ big }) => (big ? "12px" : "10px")};
+  outline: none;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  margin: 5px;
+  font-weight: bold;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? "#fff" : "#650004")};
+    color: ${({ dark }) => (dark ? "#650004" : "#fff")};
+  }
+`;
+
+const PorductPage = ({
   lightBg,
   id,
   imgStart,
@@ -114,6 +139,8 @@ const InfoSection = ({
   dark,
   dark2,
   noButton,
+  website,
+  tags,
 }) => {
   return (
     <>
@@ -129,7 +156,7 @@ const InfoSection = ({
                   <div></div>
                 ) : (
                   <BtnWrap>
-                    <Link href="/about" passHref>
+                    <Link href={website} passHref>
                       <ButtonR
                         smooth={true}
                         duration={500}
@@ -145,6 +172,26 @@ const InfoSection = ({
                     </Link>
                   </BtnWrap>
                 )}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "10px",
+                    padding: "10px",
+                    flexDirection: "column",
+                  }}
+                >
+                  {tags.map((tag) => (
+                    <Tag
+                      key={id}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                      dark2={dark2 ? 1 : 0}
+                    >
+                      {tag}
+                    </Tag>
+                  ))}
+                </div>
               </TextWrapper>
             </Column1>
             <Column2>
@@ -165,4 +212,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default PorductPage;
