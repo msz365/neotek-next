@@ -27,7 +27,7 @@ const Heading = styled.h1`
   font-weight: 600;
   color: #fff;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 540px) {
     font-size: 32px;
   }
 `;
@@ -39,7 +39,7 @@ const ContactContentWrapper = styled.div`
   justify-content: center;
   text-align: center;
   padding: 20px;
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 540px) {
     width: 100%;
   }
 `;
@@ -70,7 +70,7 @@ const ContactFormRow = styled.div`
   @media screen and (max-width: 768px) {
     grid-template-areas: "col1" "col2";
   }
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 540px) {
     margin: 5px;
     padding: 5px;
     grid-template-areas: "col1 col1" "col2 col2";

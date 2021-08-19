@@ -60,7 +60,7 @@ export const homeObjFive = {
   lightText: false,
   lightTextDesc: false,
   topLine: "",
-  headline: "An Expansive Footprint",
+  headline: "An Extensive Footprint",
   description:
     "With our regional office in UAE and projects spanning the length of the GCC, we bring our experience and relationships to Pakistan. To serve numerous verticals, we have a diverse range of offerings that can ensure new heights of success for our clients",
   buttonLabel: "",
@@ -72,5 +72,3 @@ export const homeObjFive = {
   darkText: true,
   noButton: true,
 };
-
-
