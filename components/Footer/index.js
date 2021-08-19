@@ -127,10 +127,19 @@ const SocialIcons = styled.div`
 const SocialIconLink = styled.a`
   color: #fff;
   font-size: 25px;
-
+  border: 1px solid #e0e0e0;
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #650004;
   &:hover {
     color: #560004;
     transition: 0.3s ease-out;
+    background-color: #e0e0e0;
+    border: 1px solid #650004;
   }
 `;
 
