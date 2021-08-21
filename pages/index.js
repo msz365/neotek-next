@@ -31,7 +31,7 @@ const ModalOutlayWrapper = styled.div`
 `;
 const ModalDiv = styled.div`
   background-color: #fff;
-  height: 70%;
+
   width: 50%;
   z-index: 9999999;
   position: relative;
@@ -232,9 +232,9 @@ const TipWrap = styled.div`
   }
 `;
 const TipWrapper = styled.div`
-  @media screen and (max-width: 468px) {
-    display: none;
-  }
+  // @media screen and (max-width: 468px) {
+  //   display: none;
+  // }
 `;
 
 export default function Home() {
@@ -249,8 +249,7 @@ export default function Home() {
     headline: "QLIMS Starter Package end of year promotion!",
     description:
       "Do you need a LIMS which does not cost a fortune and take months to implement?",
-    description2:
-      "QLIMS is a real SaaS LIMS reduced to only EURO 9.995 per year!",
+    description2: "QLIMS is a real SaaS LIMS reduced to only €9,995 per year!",
     description3: "Valid until 15th of December 2021",
     buttonLabel: "More Details",
     imgStart: true,
@@ -274,6 +273,7 @@ export default function Home() {
     tip3: "Lower quality control costs",
     tip4: "Ensure instant compliance",
   };
+  console.log(process.env.SENDGRID_API_KEY);
   return (
     <div
       style={
@@ -316,6 +316,9 @@ export default function Home() {
                       </Heading>
                       <Subtitle darkText={data.darkText}>
                         {data.description}
+                      </Subtitle>
+                      <Subtitle darkText={data.darkText}>
+                        {process.env.SENDGRID_API_KEY}
                       </Subtitle>
                       <Subtitle darkText={data.darkText}>
                         {data.description2}

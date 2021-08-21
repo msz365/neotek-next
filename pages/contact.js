@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FiPhoneCall, FiInstagram } from "react-icons/fi";
 import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
-import { AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
+import { AiFillLinkedin, AiFillYoutube, AiOutlineClose } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import Head from "next/head";
 import { ButtonR } from "../components/ButtonRElement";
+import { FaThumbsUp } from "react-icons/fa";
 
 const ContactWrapper = styled.div`
   background: #650004;
@@ -211,7 +212,93 @@ const SocialLink = styled.a`
   }
 `;
 
-function contact() {
+const ModalOutlayWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.4);
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const ModalDiv = styled.div`
+  background-color: #fff;
+
+  width: 30%;
+  z-index: 9999999;
+  position: relative;
+  filter: none;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 20px;
+  @media screen and (max-width: 475px) {
+    font-size: 3rem;
+    padding-top: 30px;
+    width: 60%;
+  }
+`;
+const CloseWrapper = styled.div`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  outlie: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #650004;
+  font-weight: 900;
+  &:hover {
+    background-color: #650004;
+    color: #fff;
+  }
+`;
+
+const ModalContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const ModalHeading = styled.h1`
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #650004;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 475px) {
+    font-size: 20px;
+  }
+`;
+const IconWrapper = styled.div`
+  color: #333333;
+  font-size: 10rem;
+  @media screen and (max-width: 768px) {
+    font-size: 6rem;
+  }
+  @media screen and (max-width: 475px) {
+    font-size: 3rem;
+    padding-top: 30px;
+  }
+`;
+
+function Contact() {
+  const [formSubmit, setformSubmit] = useState(true);
+  const [open, setOpen] = useState(true);
+  // const [history, useHistory] = useHistory();
+
   async function handleOnSubmit(e) {
     e.preventDefault();
     const formData = {};
@@ -224,6 +311,8 @@ function contact() {
       body: JSON.stringify(formData),
     });
     console.log(formData);
+    setformSubmit(true);
+    // history.push("/");
   }
 
   return (
@@ -241,6 +330,27 @@ function contact() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      {formSubmit && open ? (
+        <ModalOutlayWrapper>
+          <ModalDiv>
+            <CloseWrapper>
+              <AiOutlineClose onClick={() => setOpen(!open)} />
+            </CloseWrapper>
+            <ModalContent>
+              <IconWrapper>
+                <FaThumbsUp />
+              </IconWrapper>
+              <div>
+                <ModalHeading style={{ textAlign: "center" }}>
+                  Thank you for contacting us! We will get back to you shortly.
+                </ModalHeading>
+              </div>
+            </ModalContent>
+          </ModalDiv>
+        </ModalOutlayWrapper>
+      ) : (
+        <div></div>
+      )}
       <ContactWrapper>
         <ContactContentWrapper>
           <Heading>Get in Touch</Heading>
@@ -411,4 +521,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;
