@@ -273,7 +273,7 @@ export default function Home() {
     tip3: "Lower quality control costs",
     tip4: "Ensure instant compliance",
   };
-  console.log(process.env.SENDGRID_API_KEY);
+
   return (
     <div
       style={
@@ -317,9 +317,7 @@ export default function Home() {
                       <Subtitle darkText={data.darkText}>
                         {data.description}
                       </Subtitle>
-                      <Subtitle darkText={data.darkText}>
-                        {process.env.SENDGRID_API_KEY}
-                      </Subtitle>
+
                       <Subtitle darkText={data.darkText}>
                         {data.description2}
                       </Subtitle>
