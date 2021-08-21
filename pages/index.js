@@ -254,7 +254,7 @@ export default function Home() {
     description3: "Valid until 15th of December 2021",
     buttonLabel: "More Details",
     imgStart: true,
-    img: require("../public/Promotion-2021.png"),
+    img: require("../public/promotion-2021.png")
     alt: "promotion",
     dark: true,
     primary: true,
