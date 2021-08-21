@@ -331,7 +331,7 @@ function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {formSubmit && open ? (
-        <ModalOutlayWrapper>
+        <ModalOutlayWrapper onClick={() => setOpen(!open)}>
           <ModalDiv>
             <CloseWrapper>
               <AiOutlineClose onClick={() => setOpen(!open)} />
