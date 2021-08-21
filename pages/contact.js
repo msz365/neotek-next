@@ -295,7 +295,7 @@ const IconWrapper = styled.div`
 `;
 
 function Contact() {
-  const [formSubmit, setformSubmit] = useState(true);
+  const [formSubmit, setformSubmit] = useState(false);
   const [open, setOpen] = useState(true);
   // const [history, useHistory] = useHistory();
 
