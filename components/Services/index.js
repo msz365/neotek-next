@@ -68,7 +68,7 @@ const ServicesIcon = styled.img`
   margin-bottom: 10px;
 `;
 
-const ServicesH1 = styled.h1`
+const ServicesH1 = styled.h2`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
@@ -78,7 +78,7 @@ const ServicesH1 = styled.h1`
   }
 `;
 
-const ServicesH2 = styled.h2`
+const ServicesH2 = styled.h3`
   font-size: 1rem;
   margin-bottom: 10px;
   color: #560004;
@@ -97,7 +97,7 @@ const Services = () => {
         <ServicesH1>Our Services</ServicesH1>
         <ServicesWrapper>
           <ServicesCard>
-            <Image alt="" src={Icon1} />
+            <Image alt="services1" src={Icon1} />
             <ServicesH2>Preventive Maintenance</ServicesH2>
             <ServicesP>
               Our team of highly trained engineers will carry out calibration &
@@ -105,7 +105,7 @@ const Services = () => {
             </ServicesP>
           </ServicesCard>
           <ServicesCard>
-            <Image alt="" src={Icon2} />
+            <Image alt="services2" src={Icon2} />
             <ServicesH2>Service Contracts</ServicesH2>
             <ServicesP>
               Renewable Yearly Contracts for all your calibration & servicing
@@ -113,7 +113,7 @@ const Services = () => {
             </ServicesP>
           </ServicesCard>
           <ServicesCard>
-            <Image alt="" src={Icon3} />
+            <Image alt="services3" src={Icon3} />
             <ServicesH2>Method Development</ServicesH2>
             <ServicesP>
               We can help you in development of methods per internationally

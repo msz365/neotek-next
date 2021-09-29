@@ -62,7 +62,7 @@ const TopLine = styled.p`
   margin-bottom: 16px;
 `;
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   margin-bottom: 24px;
   font-size: 48px;
   line-height: 1.1;

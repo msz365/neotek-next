@@ -83,7 +83,7 @@ const ProductsIcon = styled.img`
   margin-bottom: 10px;
 `;
 
-const ProductsH1 = styled.h1`
+const ProductsH1 = styled.h2`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
@@ -93,7 +93,7 @@ const ProductsH1 = styled.h1`
   }
 `;
 
-const ProductsH2 = styled.h2`
+const ProductsH2 = styled.h3`
   font-size: 1rem;
   margin-bottom: 10px;
   color: #560004;
@@ -116,7 +116,7 @@ const Products = () => {
               href="/products/thermo"
               aria-label="Thermo Fisher Chemical Detection"
             >
-              <Image alt="" src={Icon1} />
+              <Image alt="thermo" src={Icon1} />
               <ProductsH2>Safety & Security Portfolio</ProductsH2>
               <ProductsP>
                 The best in handheld Elemental Analysis & Radiation Detection
@@ -128,7 +128,7 @@ const Products = () => {
               href="/products/perkin"
               aria-label="Perkin Elmer Dairy and Atomic Absorption"
             >
-              <Image alt="" src={Icon2} />
+              <Image alt="perkin" src={Icon2} />
               <ProductsH2>Atomic Absorption & Dairy Analysis</ProductsH2>
               <ProductsP>
                 State of the Art Dairy Analysis & Atomic Absorption Systems
@@ -140,7 +140,7 @@ const Products = () => {
               href="/products/perkin"
               aria-label="Perten Dough and Grain Analyzers"
             >
-              <Image alt="" src={Icon3} />
+              <Image alt="perkin" src={Icon3} />
               <ProductsH2>Dough & Grain Analysers</ProductsH2>
               <ProductsP>
                 A Wide Variety of Instruments for Analysis of Different
@@ -163,7 +163,7 @@ const Products = () => {
               href="/products/vwr"
               aria-label="VWR Consumables Reagents and Chemicals"
             >
-              <Image alt="" src={Icon5} />
+              <Image alt="vwr" src={Icon5} />
               <ProductsH2>A Complete Spectrum</ProductsH2>
               <ProductsP>
                 Your One-Stop for General Lab Equipment, Consumables & Reagents.
@@ -177,7 +177,7 @@ const Products = () => {
               href="/products/honeywell"
               aria-label="Honeywell Gas Detection"
             >
-              <Image alt="" src={Icon7} />
+              <Image alt="honeywell" src={Icon7} />
               <ProductsH2>Gas Detection Portfolio</ProductsH2>
               <ProductsP>
                 Single & Multi Gas Detection. Disposable & Serviceable Options.
@@ -190,7 +190,7 @@ const Products = () => {
               href="/products/myscada"
               aria-label="mySCADA Automation"
             >
-              <Image alt="" src={Icon8} />
+              <Image alt="myscada" src={Icon8} />
               <ProductsH2>Industrial Automation</ProductsH2>
               <ProductsP>
                 Automate Your Manufacturing Process & Leverage the Insights to
@@ -203,7 +203,7 @@ const Products = () => {
               href="/products/isystems"
               aria-label="Micorosoft ERP"
             >
-              <Image alt="" src={Icon9} />
+              <Image alt="isystems" src={Icon9} />
               <ProductsH2>Enterprise Resource Planning</ProductsH2>
               <ProductsP>
                 Dynamics 365 for Industries is an integrated solution based on
@@ -216,7 +216,7 @@ const Products = () => {
               href="/products/gester"
               aria-label="GESTER Testing"
             >
-              <Image alt="" src={Icon10} />
+              <Image alt="gester" src={Icon10} />
               <ProductsH2>Testing Equipment for Various Industries</ProductsH2>
               <ProductsP>
                 Testing Solutions for Masks, Footwear, Textile and Furniture
@@ -225,7 +225,7 @@ const Products = () => {
           </ProductsCard>
           <ProductsCard>
             <ProductCardLink href="/products/galvano" aria-label="Galvano">
-              <Image alt="" src={Icon11} />
+              <Image alt="galvano" src={Icon11} />
               <ProductsH2>Quality Control for Pharma</ProductsH2>
               <ProductsP>
                 A variety of affordable QC equipment for Pharma, manufactured in
