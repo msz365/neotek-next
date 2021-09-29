@@ -322,12 +322,70 @@ function Contact() {
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <title>Contact us | Neotek</title>
+        <title>Contact Us | Neotek</title>
 
+        <meta name="title" content="Contact Us | Neotek" />
         <meta
           name="description"
-          content="Contact Us. Call us, Message us, Write to us or Vist us "
+          content="Contact Us. Call us. Email us. Visit us or leave a message"
         />
+        <meta
+          name="keywords"
+          content="Neotek Pakistan, Contact Us, Email, Phone number, Address, Location"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="pageName" content="Contact" />
+        <meta name="channel" content="contact" />
+        <meta name="subTopic" content="content" />
+        <meta name="contentType" content="contact" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="3 days" />
+        <meta name="autor" content="Mohammad Suleman Zia" />
+        <meta name="image" content="https://www.neotek.com.pk/og-image.png" />
+       
+        <meta itemProp="name" content="Contact Us | Neotek" />
+        <meta
+          itemProp="description"
+          content="Contact Us. Call us. Email us. Visit us or leave a message"
+        />
+        <meta
+          itemProp="image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.neotek.com.pk/contact" />
+        <meta property="og:title" content="Contact Us | Neotek" />
+        <meta
+          property="og:description"
+          content="Contact Us. Call us. Email us. Visit us or leave a message"
+        />
+        <meta
+          property="og:image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta name="og:site_name" content="Contact Us | Neotek" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="fb:admins" content="" />
+        <meta name="fb:app_id" content="" />
+
+        <meta
+          property="twitter:card"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta
+          property="twitter:url"
+          content="https://www.neotek.com.pk/contact"
+        />
+        <meta property="twitter:title" content="Contact Us | Neotek" />
+        <meta
+          property="twitter:description"
+          content="Contact Us. Call us. Email us. Visit us or leave a message"
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <link rel="canonical" href="https://www.neotek.com.pk/contact" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {formSubmit && open ? (

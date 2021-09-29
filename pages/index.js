@@ -18,6 +18,55 @@ import { IoTimerOutline } from "react-icons/io5";
 import { GrCompliance } from "react-icons/gr";
 import { BsFileCheck } from "react-icons/bs";
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Neotek Pakistan",
+  image: "https://neotek.com.pk/Logo-color.png",
+  "@id": "",
+  url: "https://www.neotek.com.pk",
+  telephone: "00923111444226",
+  priceRange: "$$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "142, Street 12, Chaklala Scheme III",
+    addressLocality: "Rawalpindi",
+    postalCode: "46200",
+    addressCountry: "PK",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.585625,
+    longitude: 73.09063,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "09:00",
+      closes: "12:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "15:00",
+      closes: "18:00",
+    },
+  ],
+  sameAs: [
+    "https://www.facebook.com/neotekpk/",
+    "https://www.instagram.com/neotekpk/",
+    "https://www.youtube.com/channel/UCDg0gomfedA2JfHXHWjZwBA",
+    "https://pk.linkedin.com/company/neotek-pak",
+  ],
+};
+
 const ModalOutlayWrapper = styled.div`
   height: 100%;
   width: 100%;
@@ -128,7 +177,7 @@ const TopLine = styled.p`
   margin-bottom: 16px;
 `;
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   margin-bottom: 15px;
   font-size: 36px;
   line-height: 1.1;
@@ -241,7 +290,7 @@ export default function Home() {
   const [open, setOpen] = useState(true);
 
   const data = {
-    id: "thermo",
+    id: "qlims-promo",
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
@@ -289,13 +338,70 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <title>NEOTEK</title>
-
+        <title>NEOTEK PAKISTAN</title>
+        <meta name="title" content="NEOTEK PAKISTAN" />
         <meta
           name="description"
-          content="Large Scale, Table-top & Handheld Analytical Instruments. Field Safety Instruments, Radiation Detection & Monitoring, Consumables, Chemicals & Reagents, Industrial Automation and much more."
+          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="Neotek Pakistan, Thermo Fisher Scientific, Honeywell, OnQ Software, VWR, Microsoft Dynamics 365, Perkin Elmer, Perten, Spectrum Instruments, Gester"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="pageName" content="Home" />
+        <meta name="channel" content="home" />
+        <meta name="subTopic" content="content" />
+        <meta name="contentType" content="home" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="3 days" />
+        <meta name="autor" content="Mohammad Suleman Zia" />
+        <meta name="image" content="https://www.neotek.com.pk/og-image.png" />
+
+        <meta itemProp="name" content="Neotek Pakistan" />
+        <meta
+          itemProp="description"
+          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+        />
+        <meta
+          itemProp="image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.neotek.com.pk" />
+        <meta property="og:title" content="Neotek Pakistan" />
+        <meta
+          property="og:description"
+          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+        />
+        <meta
+          property="og:image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta name="og:site_name" content="NEOTEK PAKISTAN" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="fb:admins" content="" />
+        <meta name="fb:app_id" content="" />
+
+        <meta
+          property="twitter:card"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <meta property="twitter:url" content="https://www.neotek.com.pk" />
+        <meta property="twitter:title" content="Neotek Pakistan" />
+        <meta
+          property="twitter:description"
+          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.neotek.com.pk/og-image.png"
+        />
+        <link rel="canonical" href="https://www.neotek.com.pk" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
       {open ? (
         <ModalOutlayWrapper onClick={() => setOpen(!open)}>

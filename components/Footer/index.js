@@ -192,7 +192,7 @@ const Footer = () => {
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to="/" onClick={toggleHome}>
-                <Image alt="" src={logo} height="45px" width="150px" />
+                <Image alt="Neotek" src={logo} height="45px" width="150px" />
               </SocialLogo>
               <WebsiteRights>
                 © {new Date().getFullYear()} All Rights Reserved.

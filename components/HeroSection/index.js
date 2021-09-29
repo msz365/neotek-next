@@ -127,7 +127,9 @@ const HeroSection = () => {
         />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Next Generation Analytical Instruments</HeroH1>
+        <HeroH1>
+          Next Generation Analytical Instruments by Neotek Pakistan
+        </HeroH1>
         <HeroP>
           Large Scale, Table-top & Handheld Analytical Instruments. Field Safety
           Instruments, Radiation Detection & Monitoring, Consumables, Chemicals
