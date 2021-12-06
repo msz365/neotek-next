@@ -29,13 +29,17 @@ const ServicesCard = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 280px;
   width: 280px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  @media screen and (max-width: 480px) {
+    width: 180px;
+    height: 180px;
+  }
 
   &:hover {
     transform: scale(1.02);
@@ -54,6 +58,10 @@ const ServicesH2 = styled.h3`
   font-size: 1rem;
   margin-bottom: 10px;
   color: #560004;
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 `;
 
 const ServiceCardLink = styled(Link)`
@@ -69,24 +77,13 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   color: #fff;
   text-align: center;
-  padding: 5px;
+  padding: 15px;
 `;
 const ContentText = styled.p`
   font-size: 1.2rem;
   margin-bottom: 25px;
 `;
-const ImgBx = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 5px;
-`;
+const ImgBx = styled.div``;
 const ImageStyle = styled(Image)`
   position: absolute;
   top: 0;

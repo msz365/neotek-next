@@ -24,12 +24,17 @@ const InfoWrapper = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
   z-index: 3;
-  width: 70%;
+  width: 70vw;
   margin-right: auto;
   margin-left: auto;
   padding: 50px;
   justify-content: center;
   border-radius: 5px;
+  @media screen and (max-width: 480px) {
+    padding:20px;
+    margin:20px;
+    width:auto;
+  }
 `;
 
 const InfoRow = styled.div`

@@ -37,6 +37,7 @@ const ProductsWrapper = styled.div`
   padding: 50px;
   border-radius: 5px;
   width: 70%;
+
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -49,7 +50,9 @@ const ProductsWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 20px;
+    margin: 20px;
+    width: auto;
   }
 `;
 

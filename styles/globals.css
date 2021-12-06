@@ -4,10 +4,15 @@ body {
   margin: 0;
   font-family: "Encode Sans Expanded", sans-serif;
   background: linear-gradient(
+    63deg,
+    rgb(242, 168, 168) 2.9%,
+    rgb(94, 46, 165) 102.1%
+  ) !important;
+  /* background: linear-gradient(
     16.5deg,
     rgb(203, 189, 240) 24.7%,
     rgb(253, 184, 169) 68.9%
-  ) !important;
+  ) !important; */
   /* background: linear-gradient(
     to right,
     rgb(198, 66, 110),

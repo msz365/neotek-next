@@ -117,11 +117,13 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
-        <Link href="/" passHref>
-          <NavLogo>
-            <Image src={logo} height="60px" width="60px" alt="logo" />
-          </NavLogo>
-        </Link>
+        {/* <Link href="/" passHref>
+          <SidebarLink onClick={toggle}>
+            <NavLogo>
+              <Image src={logo} height="60px" width="60px" alt="logo" />
+            </NavLogo>
+          </SidebarLink>
+        </Link> */}
         <SidebarMenu>
           <li style={{ textDecoration: "none", listStyle: "none" }}>
             <Link href="/" passHref>
@@ -134,13 +136,18 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Link>
           </li>
           <li style={{ textDecoration: "none", listStyle: "none" }}>
-            <Link href="/products" passHref>
+            <Link href="/#products" passHref>
               <SidebarLink onClick={toggle}>Products</SidebarLink>
             </Link>
           </li>
           <li style={{ textDecoration: "none", listStyle: "none" }}>
             <Link href="/services" passHref>
               <SidebarLink onClick={toggle}>Services</SidebarLink>
+            </Link>
+          </li>
+          <li style={{ textDecoration: "none", listStyle: "none" }}>
+            <Link href="/blog" passHref>
+              <SidebarLink onClick={toggle}>Blog</SidebarLink>
             </Link>
           </li>
           <li style={{ textDecoration: "none", listStyle: "none" }}>

@@ -29,7 +29,6 @@ const ServicesContainer = styled.div`
 `;
 
 const ServicesWrapper = styled.div`
-  width: 70%;
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -39,16 +38,18 @@ const ServicesWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
   padding: 50px;
-
+  width: 70%;
   @media screen and (max-width: 1150px) {
     grid-template-columns: 1fr 1fr;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 20px;
   }
   @media screen and (max-width: 480px) {
-    padding: 0 10px;
+    padding: 20px;
+    margin: 20px;
+    width: auto;
   }
 `;
 

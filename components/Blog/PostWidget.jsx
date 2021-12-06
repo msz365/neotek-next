@@ -12,6 +12,9 @@ const WidgetContainer = styled.div`
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 2rem;
+  @media screen and (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 const Heading = styled.h3`
   margin-bottom: 24px;
@@ -41,7 +44,7 @@ const PostDate = styled.h5`
 
   margin: 0 !important;
   @media screen and (max-width: 480px) {
-    font-size: 0.5rem;
+    
   }
 `;
 const PostsWrapper = styled.div`
@@ -57,6 +60,9 @@ const PostRow = styled.div`
   justify-content: space-between;
   margin-bottom: 15px;
   padding: 0 10px;
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
 `;
 const PostImage = styled(Image)`
   object-size: cover;

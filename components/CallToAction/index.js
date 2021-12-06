@@ -40,6 +40,11 @@ const CtaContent = styled.div`
     padding: 0 15px;
     font-size: 0.7rem;
   }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    padding: 0 15px;
+    font-size: 0.7rem;
+  }
 `;
 
 const CtaTop = styled.div`
@@ -55,6 +60,9 @@ const CtaBottom = styled.div`
   justify-content: space-around;
   padding: 10px;
   width: 60%;
+  @media screen and (max-width: 480px) {
+    width: 70%;
+  }
 `;
 
 const CtaIconWrapper = styled.div`
@@ -71,6 +79,10 @@ const CtaOrWrapper = styled.div`
   margin: 10px;
   padding: 10px;
   border-radius: 9999px;
+  @media screen and (max-width: 480px) {
+    padding: 5px;
+    margin: 5px;
+  }
 `;
 
 const CtaIcon1 = styled(IoPhonePortraitOutline)`
@@ -79,6 +91,9 @@ const CtaIcon1 = styled(IoPhonePortraitOutline)`
   color: ffffff !important;
   &:hover {
     color: #333333 !important;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 40px;
   }
 `;
 
@@ -89,6 +104,9 @@ const CtaIcon2 = styled(FaFacebookMessenger)`
   &:hover {
     color: #650004 !important;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 40px;
+  }
 `;
 const CtaIcon3 = styled(BsWhatsapp)`
   font-size: 70px;
@@ -96,6 +114,9 @@ const CtaIcon3 = styled(BsWhatsapp)`
   color: #ffffff;
   &:hover {
     color: #4bc959 !important;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 40px;
   }
 `;
 const ImageContainer = styled.div`
@@ -107,6 +128,13 @@ const ImageContainer = styled.div`
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease-in-out;
+  }
+`;
+const CtaText = styled.h5`
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0 !important;
   }
 `;
 
@@ -152,9 +180,7 @@ function CallToAction() {
               }}
             >
               <CtaIcon1 />
-              <h5 style={{ color: "inherit", textDecoration: "inherit" }}>
-                Give us a call
-              </h5>
+              <CtaText>Give us a call</CtaText>
             </a>
           </CtaIconWrapper>
           <CtaOrWrapper>
@@ -162,7 +188,7 @@ function CallToAction() {
           </CtaOrWrapper>
           <CtaIconWrapper>
             <CtaIcon2 />
-            <h5>Chat on Messenger</h5>
+            <CtaText>Chat on Messenger</CtaText>
           </CtaIconWrapper>
           <CtaOrWrapper>
             <span style={{ fontWeight: "800" }}>OR</span>
@@ -181,7 +207,7 @@ function CallToAction() {
               }}
             >
               <CtaIcon3 />
-              <h5>Chat on WhatsApp</h5>
+              <CtaText>Chat on WhatsApp</CtaText>
             </a>
           </CtaIconWrapper>
         </CtaBottom>

@@ -10,6 +10,9 @@ const CategoriesContainer = styled.div`
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 2rem;
+  @media screen and (max-width: 480px) {
+    padding: 10px;
+  }
 `;
 const Heading = styled.h3`
   margin-bottom: 24px;
@@ -43,6 +46,9 @@ const CategoryWrapper = styled.div`
   flex-direction: column;
   margin-bottom: 15px;
   padding: 0 10px;
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
 `;
 
 const Categories = () => {

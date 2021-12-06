@@ -13,7 +13,7 @@ const CommentContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 480px) {
-    padding: 5px;
+    padding: 10px;
     margin: 10px 5px;
   }
 `;
@@ -27,6 +27,9 @@ const CommentWrapper = styled.div`
 
   flex-direction: column;
   width: 90%;
+  @media screen and (max-width: 480px) {
+    width: auto;
+  }
 `;
 
 const CommentHeading = styled.h4`
@@ -48,6 +51,9 @@ const CommentSection = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
 `;
 const CommentCheckSection = styled.div`
   width: 100%;
@@ -137,6 +143,10 @@ const BtnSubmit = styled.button`
     background: #fff;
     color: #650004;
     border: 1px solid #650004;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 10px;
+    padding: 14px 50px;
   }
 `;
 const Message = styled.p`

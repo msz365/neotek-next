@@ -54,6 +54,7 @@ const CotactFormWrapper = styled.div`
     width: 95%;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
   }
 `;
 const ContactFormRow = styled.div`
@@ -90,6 +91,11 @@ const ContactFormLeft = styled(motion.div)`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   z-index: 100;
+  @media screen and (max-width: 480px) {
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 `;
 const ContactFormRight = styled.div`
   margin-bottom: 15px;
@@ -161,20 +167,20 @@ const FormLabel = styled.label`
   font-weight: bold;
 `;
 const FormTextArea = styled.textarea`
+  border: none;
+  background: none;
+  border-bottom: 1px solid #333333;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  color: white;
+  &:focus {
     border: none;
-    background: none;
-    border-bottom: 1px solid #333333;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    background: transparent;
-    padding: 10px;
-    color: white;
-    &:focus {
-      border: none;
-      outline: none;
-      border-bottom: 1px solid black;
-      background: rgba(255, 255, 255, 0.1);
-    }
+    outline: none;
+    border-bottom: 1px solid black;
+    background: rgba(255, 255, 255, 0.1);
+  }
 `;
 
 const ContactMapWrapper = styled.div`
