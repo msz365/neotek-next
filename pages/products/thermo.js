@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const thermo = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,12 +21,12 @@ const thermo = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, Thermo Fisher Scientific, Handheld Chemical Identifaction,
-          Handheld Explosives Detection,
-          Handheld Raman Analyzers,
-          Handheld FTIRs,
-          Handheld Radiation Detection,
-          Area Monitoring, 1064 Defender, Trunarc, Gemini"
+          content="Neotek Pakistan, Thermo Fisher Pakistan, Handheld Chemical Identifaction pakistan, radiation detection pakistan, harshaw tld pakistan, explosive detection pakistan, narcotics detection pakistan,
+          Handheld Explosives Detection pakistan,
+          Handheld Raman Analyzers paksitan,
+          Handheld FTIR paksitan,
+          Handheld Radiation Detection pakistan,
+          Area Monitoring pakistan, 1064 Defender pakistan, Trunarc pakistan, Gemini pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="Thermo Fisher Scientific" />

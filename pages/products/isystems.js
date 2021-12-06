@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const isystems = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div >
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,7 +21,7 @@ const isystems = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, microsoft, intelligent systems, dynamics 365, erp"
+          content="Neotek Pakistan, microsoft pakistan, intelligent systems, dynamics 365 pakistan, erp pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="isystems" />

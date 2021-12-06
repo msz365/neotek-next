@@ -2,21 +2,14 @@ import Head from "next/head";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
 import { homeObjOne } from "../components/InfoSection/Data";
-import { homeObjThree } from "../components/Contact/Data";
 import Products from "../components/Products";
 import Services from "../components/Services";
-import Contact from "../components/Contact";
 import styled from "styled-components";
-import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ButtonR } from "../components/ButtonRElement";
-import { FaMoneyBillAlt } from "react-icons/fa";
-import { BiError } from "react-icons/bi";
-import { IoTimerOutline } from "react-icons/io5";
-import { GrCompliance } from "react-icons/gr";
-import { BsFileCheck } from "react-icons/bs";
+import CallToAction from "../components/CallToAction";
+import { motion } from "framer-motion";
+import ImageSlider from "../components/Slider/ImageSlider";
+
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -309,14 +302,7 @@ export default function Home() {
     darkText: true,
     noButton: false,
     website: "https://www.onqsoft.com.au/qlims-2021-starter-package-promotion/",
-    // tags: [
-    //   "Handheld Chemical Identifaction",
-    //   "Handheld Explosives Detection",
-    //   "Handheld Raman Analyzers",
-    //   "Handheld FTIRs",
-    //   "Handheld Radiation Detection",
-    //   "Area Monitoring",
-    // ],
+
     tip1: "Reduce lead times by up to 70%",
     tip2: "Reduce errors and rework",
     tip3: "Lower quality control costs",
@@ -324,15 +310,7 @@ export default function Home() {
   };
 
   return (
-    <div
-      style={
-        {
-          // display: "flex",
-          // alignItems: "center",
-          // justifyContent: "center",
-        }
-      }
-    >
+    <motion.div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -342,11 +320,11 @@ export default function Home() {
         <meta name="title" content="NEOTEK PAKISTAN" />
         <meta
           name="description"
-          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+          content="We are distributors for VWR, Thermo Fisher Scientific handheld series, MySCADA, QLIMS, Honeywell Gas Detection, Intelligent Systems Dynamics 365, Spectrum and Perten Instruments from Perkin Elmer and Gester for Textile and Footwear testing"
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, Thermo Fisher Scientific, Honeywell, OnQ Software, VWR, Microsoft Dynamics 365, Perkin Elmer, Perten, Spectrum Instruments, Gester"
+          content="Neotek Pakistan, Thermo Fisher Pakistan, Honeywell Pakistan, OnQ Software, LIMS Pakistan, VWR Pakistan, Microsoft Dynamics 365 Pakistan, Perkin Elmer Pakistan, Perten Pakistan, Spectrum Instruments Pakistan, Gester Instruments Pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="Home" />
@@ -361,7 +339,7 @@ export default function Home() {
         <meta itemProp="name" content="Neotek Pakistan" />
         <meta
           itemProp="description"
-          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+          content="We are distributors for VWR, Thermo Fisher Scientific handheld series, MySCADA, QLIMS, Honeywell Gas Detection, Intelligent Systems Dynamics 365, Spectrum and Perten Instruments from Perkin Elmer and Gester for Textile and Footwear testing"
         />
         <meta
           itemProp="image"
@@ -372,7 +350,7 @@ export default function Home() {
         <meta property="og:title" content="Neotek Pakistan" />
         <meta
           property="og:description"
-          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+          content="We are distributors for VWR, Thermo Fisher Scientific handheld series, MySCADA, QLIMS, Honeywell Gas Detection, Intelligent Systems Dynamics 365, Spectrum and Perten Instruments from Perkin Elmer and Gester for Textile and Footwear testing"
         />
         <meta
           property="og:image"
@@ -391,19 +369,19 @@ export default function Home() {
         <meta property="twitter:title" content="Neotek Pakistan" />
         <meta
           property="twitter:description"
-          content="Analytical Instruments, FSI, Radiation Detection & Monitoring, Consumables, Chemicals, Automation"
+          content="We are distributors for VWR, Thermo Fisher Scientific handheld series, MySCADA, QLIMS, Honeywell Gas Detection, Intelligent Systems Dynamics 365, Spectrum and Perten Instruments from Perkin Elmer and Gester for Textile and Footwear testing"
         />
         <meta
           property="twitter:image"
           content="https://www.neotek.com.pk/og-image.png"
         />
-        <link rel="canonical" href="https://www.neotek.com.pk" />
+        {/* <link rel="canonical" href="https://www.neotek.com.pk" /> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </Head>
-      {open ? (
+      {/* {open ? (
         <ModalOutlayWrapper onClick={() => setOpen(!open)}>
           <ModalDiv>
             <CloseWrapper>
@@ -537,13 +515,40 @@ export default function Home() {
         </ModalOutlayWrapper>
       ) : (
         <div></div>
-      )}
-
+      )} */}
+      {/* <main>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.8,
+              },
+            },
+          }}
+        >
+          <h1>
+            TEsting Framer motion Next Generation Analytical Instruments by
+            Neotek Pakistan Large Scale, Table-top & Handheld Analytical
+            Instruments. Field Safety Instruments, Radiation Detection &
+            Monitoring, Consumables, Chemicals & Reagents, Industrial Automation
+            and much more.
+          </h1>
+        </motion.div>
+      </main> */}
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <Products />
       <Services />
-      <Contact {...homeObjThree} />
-    </div>
+      <ImageSlider />
+      <CallToAction />
+    </motion.div>
   );
 }

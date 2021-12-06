@@ -5,7 +5,7 @@ import { prodObjFour } from "../../components/ProductPage/Data";
 import CallTOAction from "../../components/CallToAction";
 const qlims = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -20,7 +20,7 @@ const qlims = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, onq soft, qlims, lims, lab automation, lms, iso 17025, gmp, 21 cfr part 11, hipaa, gdpr"
+          content="Neotek Pakistan, onq soft pakistan, qlims, lims pakistan, lab automation pakistan, lms pakistan, iso 17025 pakistan, gmp pakistan, 21 cfr part 11 pakistan, hipaa pakistan, gdpr pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="QLIMS" />

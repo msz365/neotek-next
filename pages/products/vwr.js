@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const vwr = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,7 +21,7 @@ const vwr = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, vwr, chemicals, consumables, reagents, anayltical instruments, lab equipment, lab furniture"
+          content="Neotek Pakistan, vwr pakistan, chemicals pakistan, lab consumables pakistan, lab reagents pakistan, anayltical instruments pakistan, lab equipment paksitan, lab furniture pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="VWR" />

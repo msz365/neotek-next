@@ -4,10 +4,31 @@ import React from "react";
 import CallToAction from "../components/CallToAction";
 import InfoSection from "../components/InfoSection";
 import { homeObjFour, homeObjFive } from "../components/InfoSection/Data";
+import styled from "styled-components";
+
+const Heading = styled.h2`
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+    z-index: 2;
+  }
+`;
+const OuterContainer = styled.div`
+  display: flex;
+  // align-items: center;
+
+  flex-direction: column;
+  width: 100%;
+`;
 
 function about() {
   return (
-    <div>
+    <OuterContainer>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -30,7 +51,7 @@ function about() {
         <meta name="revisit-after" content="3 days" />
         <meta name="autor" content="Mohammad Suleman Zia" />
         <meta name="image" content="https://www.neotek.com.pk/og-image.png" />
-       
+
         <meta itemProp="name" content="About us | Neotek" />
         <meta
           itemProp="description"
@@ -73,14 +94,14 @@ function about() {
           property="twitter:image"
           content="https://www.neotek.com.pk/og-image.png"
         />
-        <link rel="canonical" href="https://www.neotek.com.pk/about" />
+        {/* <link rel="canonical" href="https://www.neotek.com.pk/about" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div style={{ marginTop: "-80px" }}></div>
+      <Heading>About Us</Heading>
       <InfoSection {...homeObjFour} />
       <InfoSection {...homeObjFive} />
       <CallToAction />
-    </div>
+    </OuterContainer>
   );
 }
 

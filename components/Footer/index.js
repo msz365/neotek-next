@@ -7,7 +7,7 @@ import { Link } from "next/link";
 import Image from "next/image";
 
 const FooterContainer = styled.footer`
-  background-color: #333333;
+  // background: linear-gradient(to right, rgb(142, 158, 171), rgb(238, 242, 243));
 `;
 const FooterWrap = styled.div`
   padding: 10px 24px;
@@ -127,19 +127,17 @@ const SocialIcons = styled.div`
 const SocialIconLink = styled.a`
   color: #fff;
   font-size: 25px;
-  border: 1px solid #e0e0e0;
+
   height: 45px;
   width: 45px;
   border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #650004;
+
   &:hover {
-    color: #560004;
+    color: #333333;
     transition: 0.3s ease-out;
-    background-color: #e0e0e0;
-    border: 1px solid #650004;
   }
 `;
 

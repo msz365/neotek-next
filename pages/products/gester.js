@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const gester = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,7 +21,7 @@ const gester = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, Gester Instruments, Textile testing, PPE testing, furniture testing, footwear testing"
+          content="Neotek Pakistan, Gester Instruments Pakistan, Textile testing Pakistan, PPE testing Pakistan, furniture testing Pakistan, footwear testing Pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="gester" />

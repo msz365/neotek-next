@@ -4,23 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 const InfoContainer = styled.div`
-  background: ${({ lightBg }) =>
-    lightBg
-      ? "linear-gradient(180deg, hsla(0, 0%, 20%, 0.7) 0%, hsla(0, 0%, 89%, 1) 10%)"
-      : "#650004"};
+  position: relative;
+
+  padding: 20px 0;
+  padding-top: 0;
   @media screen and (max-width: 768px) {
-  
   }
 `;
 
 const InfoWrapper = styled.div`
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
-  z-index: 1;
-  max-width: 1100px;
+  z-index: 3;
+  width: 70%;
   margin-right: auto;
   margin-left: auto;
-  padding: 110px 24px;
+  padding: 50px;
   justify-content: center;
+  border-radius: 5px;
 `;
 
 const InfoRow = styled.div`
@@ -29,6 +32,7 @@ const InfoRow = styled.div`
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
+  z-index: 5;
 
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
@@ -38,13 +42,13 @@ const InfoRow = styled.div`
 
 const Column1 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 15px;
   grid-area: col1;
 `;
 
 const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 15px;
   grid-area: col2;
 `;
 
@@ -55,7 +59,7 @@ const TextWrapper = styled.div`
 `;
 
 const TopLine = styled.p`
-  color: ${({ lightText }) => (lightText ? "#f7f8f8" : "#650004")};
+  color: ${({ lightText }) => (lightText ? "#ffffff" : "#ffffff")};
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -64,12 +68,13 @@ const TopLine = styled.p`
   margin-bottom: 16px;
 `;
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 2rem;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8f8" : "#650004")};
+
+  color: ${({ lightText }) => (lightText ? "#ffffff" : "#ffffff")};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -81,12 +86,15 @@ const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ darkText }) => (darkText ? "#650004" : "#fff")};
+  color: ${({ darkText }) => (darkText ? "#ffffff" : "#ffffff")};
+  text-align: justify;
+  text-justify: inter-word;
 `;
 
 const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin-top: 40px;
 `;
 
 const ImgWrap = styled.div`
@@ -100,26 +108,90 @@ const Img = styled.img`
   padding-right: 0;
 `;
 
-const Tag = styled.p`
-  border-radius: 5px;
-  background: #333333;
-  white-space: nowrap;
-  padding: ${({ big }) => (big ? "14px 40px" : "12px 20px")};
-  color: ${({ dark }) => (dark ? "#fff" : "#650004")};
-  font-size: ${({ big }) => (big ? "12px" : "10px")};
-  outline: none;
-  border: none;
-  text-decoration: none;
+const CallToAction = styled.div`
+  position: relative;
   display: flex;
-  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
   align-items: center;
+  justify-content: center;
+
+  :before {
+    content: "";
+    position: absolute;
+    box-shadow: inset 0 0 0 2000px rgba(51, 51, 51, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 0;
+  }
+`;
+const CtaCont = styled.div`
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
-  margin: 5px;
-  font-weight: bold;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#650004")};
-    color: ${({ dark }) => (dark ? "#650004" : "#fff")};
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 60%;
+  margin: 30px;
+
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  @media screen and (max-width: 480px) {
+    width: 80%;
+  }
+`;
+const CtaImg = styled.div`
+  width: 300px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+
+  z-index: 5;
+  @media screen and (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+  }
+`;
+const CtaIntro = styled.div`
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  text-align: justify;
+  text-justify: inter-word;
+  z-index: 5;
+  @media screen and (max-width: 480px) {
+    width: 80%;
+  }
+`;
+const BgImg = styled.div`
+  width: 100px;
+  height: 100px;
+  padding: 0 30px;
+  @media screen and (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
+`;
+const BgImgWrap = styled.div`
+  width: 80%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: -75px;
+  margin-top: -75px;
+  @media screen and (max-width: 1300px) {
+    width: 90%;
   }
 `;
 
@@ -141,63 +213,64 @@ const PorductPage = ({
   noButton,
   website,
   tags,
+  bg,
+  item1name,
+  item1description,
+  item1image,
+  item2name,
+  item2description,
+  item2image,
+  item3name,
+  item3description,
+  item3image,
 }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
+        <CallToAction
+          style={{
+            backgroundImage: `url(${bg.default.src})`,
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "cover",
+          }}
+        >
+          <CtaCont>
+            <CtaImg>
+              <Image
+                src={img}
+                alt={alt}
+                layout="responsive"
+                width={150}
+                height={150}
+              />
+            </CtaImg>
+            <CtaIntro>
+              <p
+                style={{
+                  color: "#ffffff",
+                  zIndex: "10",
+                }}
+              >
+                {description}
+              </p>
+            </CtaIntro>
+          </CtaCont>
+        </CallToAction>
+
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
                 <TopLine lightText={lightText}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline} </Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                {noButton ? (
-                  <div></div>
-                ) : (
-                  <BtnWrap>
-                    <Link href={website} passHref>
-                      <ButtonR
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        // exact={true}
-                        offset={-80}
-                        primary={primary ? 1 : 0}
-                        dark={dark ? 1 : 0}
-                        dark2={dark2 ? 1 : 0}
-                      >
-                        {buttonLabel}
-                      </ButtonR>
-                    </Link>
-                  </BtnWrap>
-                )}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "10px",
-                    padding: "10px",
-                    flexDirection: "column",
-                  }}
-                >
-                  {tags.map((tag) => (
-                    <Tag
-                      key={id}
-                      primary={primary ? 1 : 0}
-                      dark={dark ? 1 : 0}
-                      dark2={dark2 ? 1 : 0}
-                    >
-                      {tag}
-                    </Tag>
-                  ))}
-                </div>
+                <Heading lightText={lightText}>{item1name} </Heading>
+                <Subtitle darkText={darkText}>{item1description}</Subtitle>
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
                 <Image
-                  src={img}
+                  src={item1image}
                   alt={alt}
                   layout="responsive"
                   width={150}
@@ -206,6 +279,71 @@ const PorductPage = ({
               </ImgWrap>
             </Column2>
           </InfoRow>
+        </InfoWrapper>
+      </InfoContainer>
+      <InfoContainer lightBg={false} id={id}>
+        <InfoWrapper>
+          <InfoRow imgStart={false} lightBg={false}>
+            <Column1>
+              <TextWrapper>
+                <TopLine lightText={true}>{topLine}</TopLine>
+                <Heading lightText={true}>{item2name} </Heading>
+                <Subtitle darkText={false}>{item2description}</Subtitle>
+              </TextWrapper>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <Image
+                  src={item2image}
+                  alt={alt}
+                  layout="responsive"
+                  width={150}
+                  height={150}
+                />
+              </ImgWrap>
+            </Column2>
+          </InfoRow>
+        </InfoWrapper>
+      </InfoContainer>
+
+      <InfoContainer lightBg={lightBg} id={id}>
+        <InfoWrapper>
+          <InfoRow imgStart={imgStart}>
+            <Column1>
+              <TextWrapper>
+                <TopLine lightText={lightText}>{topLine}</TopLine>
+                <Heading lightText={lightText}>{item3name} </Heading>
+                <Subtitle darkText={darkText}>{item3description}</Subtitle>
+              </TextWrapper>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <Image
+                  src={item3image}
+                  alt={alt}
+                  layout="responsive"
+                  width={150}
+                  height={150}
+                />
+              </ImgWrap>
+            </Column2>
+          </InfoRow>
+          <BtnWrap>
+            <Link href={website} passHref>
+              <ButtonR
+                smooth={true}
+                duration={500}
+                spy={true}
+                // exact={true}
+                offset={-80}
+                primary={primary ? 1 : 0}
+                dark={dark ? 1 : 0}
+                dark2={dark2 ? 1 : 0}
+              >
+                {buttonLabel}
+              </ButtonR>
+            </Link>
+          </BtnWrap>
         </InfoWrapper>
       </InfoContainer>
     </>

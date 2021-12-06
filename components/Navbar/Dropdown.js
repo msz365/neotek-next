@@ -2,18 +2,18 @@ import React, { useState } from "react";
 // import "./Dropdown.css";
 // import { MenuItems } from "./MenuItems";
 
-import { Link } from "next/link";
+import Link from "next/link";
 
 const MenuItems = [
   {
     id: 1,
-    title: "ThermoFisher",
+    title: "Thermo Fisher Scientific",
     path: "/products/thermo",
     cName: "dropdown-link",
   },
   {
     id: 2,
-    title: "VWR",
+    title: "VWR by Avantor",
     path: "/products/vwr",
     cName: "dropdown-link",
   },
@@ -49,14 +49,8 @@ const MenuItems = [
   },
   {
     id: 8,
-    title: "Gester",
+    title: "Gester Instruments",
     path: "/products/gester",
-    cName: "dropdown-link",
-  },
-  {
-    id: 9,
-    title: "Galvano",
-    path: "/products/galvano",
     cName: "dropdown-link",
   },
 ];
@@ -74,13 +68,9 @@ function Dropdown() {
       {MenuItems.map((item) => {
         return (
           <li key={item.id}>
-            <a
-              className={item.cName}
-              href={item.path}
-              onClick={() => setClick(false)}
-            >
-              {item.title}
-            </a>
+            <Link href={item.path} passHref onClick={() => setClick(false)}>
+              <a className={item.cName}>{item.title}</a>
+            </Link>
           </li>
         );
       })}

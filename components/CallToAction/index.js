@@ -2,24 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaFacebookMessenger } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
+import Image from "next/image";
 
 const CtaWrapper = styled.div`
-  background: #e3e3e3;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
-  padding: 20px;
+  color: #ffffff;
+  padding: 20px 0;
+  width: 100%;
 `;
 
 const CtaContent = styled.div`
-  display: flex;
   width: 70%;
-  background: #333333;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  z-index: 1;
+  padding: 50px;
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 200px;
+
+  border-radius: 5px;
 
   @media screen and (max-width: 1080px) {
     width: 80%;
@@ -58,7 +67,7 @@ const CtaOrWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #650004;
+
   margin: 10px;
   padding: 10px;
   border-radius: 9999px;
@@ -67,19 +76,62 @@ const CtaOrWrapper = styled.div`
 const CtaIcon1 = styled(IoPhonePortraitOutline)`
   font-size: 70px;
   padding: 10px;
+  color: ffffff !important;
+  &:hover {
+    color: #333333 !important;
+  }
 `;
 
 const CtaIcon2 = styled(FaFacebookMessenger)`
   font-size: 70px;
   padding: 10px;
+  color: #ffffff;
+  &:hover {
+    color: #650004 !important;
+  }
 `;
+const CtaIcon3 = styled(BsWhatsapp)`
+  font-size: 70px;
+  padding: 10px;
+  color: #ffffff;
+  &:hover {
+    color: #4bc959 !important;
+  }
+`;
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
+const data = { img: require("../../public/dnb-logo.png") };
 
 function CallToAction() {
   return (
     <CtaWrapper>
       <CtaContent>
         <CtaTop>
-          <h1>We are ready!</h1>
+          <h2>Find us on Dun & Bradsheet</h2>
+          <a
+            href="https://www.dnb.com/business-directory/company-profiles.neotech_suppliers_(pvt)_limited.54aef4857b4af815017300433d704eaa.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ImageContainer>
+              <Image
+                src={data.img}
+                alt="Dun & Bradsheet Logo"
+                width={200}
+                height={100}
+              />
+            </ImageContainer>
+          </a>
           <h3 style={{ fontWeight: "50" }}>
             Are you ready to take your business to the next level with
             technology?
@@ -87,17 +139,21 @@ function CallToAction() {
         </CtaTop>
         <CtaBottom>
           <CtaIconWrapper>
-            <CtaIcon1 />
             <a
               href="tel:+923111444226"
               style={{
                 color: "inherit",
                 textDecoration: "inherit",
                 cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
               }}
             >
+              <CtaIcon1 />
               <h5 style={{ color: "inherit", textDecoration: "inherit" }}>
-                GIVE US A CALL
+                Give us a call
               </h5>
             </a>
           </CtaIconWrapper>
@@ -106,7 +162,27 @@ function CallToAction() {
           </CtaOrWrapper>
           <CtaIconWrapper>
             <CtaIcon2 />
-            <h5>CHAT WITH US</h5>
+            <h5>Chat on Messenger</h5>
+          </CtaIconWrapper>
+          <CtaOrWrapper>
+            <span style={{ fontWeight: "800" }}>OR</span>
+          </CtaOrWrapper>
+          <CtaIconWrapper>
+            <a
+              href="https://wa.me/923171114359"
+              style={{
+                color: "inherit",
+                textDecoration: "inherit",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+            >
+              <CtaIcon3 />
+              <h5>Chat on WhatsApp</h5>
+            </a>
           </CtaIconWrapper>
         </CtaBottom>
       </CtaContent>
