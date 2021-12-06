@@ -7,26 +7,24 @@ import { FaFacebook } from "react-icons/fa";
 import Head from "next/head";
 import { ButtonR } from "../components/ButtonRElement";
 import { FaThumbsUp } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
 
-const ContactWrapper = styled.div`
-  background: #650004;
-  background-image: url("https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-size: cover;
-  background-attachment: fixed;
-  margin-top: -110px;
-  padding-top: 110px;
+const ContactWrapper = styled(motion.div)`
   padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
 `;
-const Heading = styled.h1`
-  margin-bottom: 24px;
+const Heading = styled(motion.h1)`
+  margin: 2rem auto;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
 
   @media screen and (max-width: 540px) {
     font-size: 32px;
@@ -39,7 +37,7 @@ const ContactContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+
   @media screen and (max-width: 540px) {
     width: 100%;
   }
@@ -52,17 +50,21 @@ const CotactFormWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+  @media screen and (max-width: 540px) {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `;
 const ContactFormRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: "col1 col2";
-
-  backdrop-filter: blur(25px);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   margin: 10px;
   padding: 10px;
@@ -77,17 +79,24 @@ const ContactFormRow = styled.div`
     grid-template-areas: "col1 col1" "col2 col2";
   }
 `;
-const ContactFormLeft = styled.div`
+const ContactFormLeft = styled(motion.div)`
   padding: 40px 20px;
   grid-area: col1;
-  background-color: #650004;
+  background-color: #333333;
   height: auto;
   border-radius: 10px;
+  margin-left: -10px;
+  border: 1px solid white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 100;
 `;
 const ContactFormRight = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+
+  border-radius: 10px;
 `;
 const FormWrapper = styled.form``;
 
@@ -132,7 +141,7 @@ const FormGroup = styled.div`
 const FormText = styled.input`
   border: none;
   background: none;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #ffffff;
   transition: all 0.3s ease-in-out;
   width: 100%;
   background: transparent;
@@ -147,25 +156,25 @@ const FormText = styled.input`
   }
 `;
 const FormLabel = styled.label`
-  color: #650004;
+  color: #ffffff;
   padding: 10px;
   font-weight: bold;
 `;
 const FormTextArea = styled.textarea`
-  border: none;
-  background: none;
-  border-bottom: 1px solid #333333;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-  background: transparent;
-  padding: 10px;
-  color: white;
-  &:focus {
     border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    background: rgba(255, 255, 255, 0.1);
-  }
+    background: none;
+    border-bottom: 1px solid #333333;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    color: white;
+    &:focus {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid black;
+      background: rgba(255, 255, 255, 0.1);
+    }
 `;
 
 const ContactMapWrapper = styled.div`
@@ -177,10 +186,14 @@ const ContactMapWrapper = styled.div`
   text-align: center;
   padding: 20px;
   height: 600px;
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 const BtnSubmit = styled.button`
   border-radius: 50px;
-  background: #650004;
+  background: #333333;
   white-space: nowrap;
   padding: 14px 100px;
   color: #fff;
@@ -208,7 +221,7 @@ const SocialLink = styled.a`
   padding: 10px;
   border-radius: 50%;
   &:hover {
-    background: #333333;
+    color: #650004;
   }
 `;
 
@@ -293,10 +306,15 @@ const IconWrapper = styled.div`
     padding-top: 30px;
   }
 `;
+const Span = styled.span``;
 
 function Contact() {
   const [formSubmit, setformSubmit] = useState(false);
   const [open, setOpen] = useState(true);
+  const [hover, setHover] = useState(false);
+  const [hover2, setHover2] = useState(false);
+  const [hover3, setHover3] = useState(false);
+  const [hover4, setHover4] = useState(false);
   // const [history, useHistory] = useHistory();
 
   async function handleOnSubmit(e) {
@@ -314,6 +332,36 @@ function Contact() {
     setformSubmit(true);
     // history.push("/");
   }
+  const { ref, inView } = useInView({ threshold: 0.1 });
+
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+  const easing = [0.6, -0.05, 0.01, 0.99];
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 0.8,
+          bounce: 0.5,
+        },
+      });
+      animation2.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 1.2,
+          ease: easing,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: "-100vw" });
+      animation2.start({ y: 60, opacity: 0 });
+    }
+  }, [inView]);
 
   return (
     <>
@@ -342,7 +390,7 @@ function Contact() {
         <meta name="revisit-after" content="3 days" />
         <meta name="autor" content="Mohammad Suleman Zia" />
         <meta name="image" content="https://www.neotek.com.pk/og-image.png" />
-       
+
         <meta itemProp="name" content="Contact Us | Neotek" />
         <meta
           itemProp="description"
@@ -385,7 +433,7 @@ function Contact() {
           property="twitter:image"
           content="https://www.neotek.com.pk/og-image.png"
         />
-        <link rel="canonical" href="https://www.neotek.com.pk/contact" />
+        {/* <link rel="canonical" href="https://www.neotek.com.pk/contact" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       {formSubmit && open ? (
@@ -410,11 +458,11 @@ function Contact() {
         <div></div>
       )}
       <ContactWrapper>
-        <ContactContentWrapper>
-          <Heading>Get in Touch</Heading>
+        <ContactContentWrapper ref={ref}>
+          <Heading animate={animation2}>Contact Us</Heading>
           <CotactFormWrapper>
             <ContactFormRow>
-              <ContactFormLeft>
+              <ContactFormLeft animate={animation}>
                 <LeftContent>
                   <LeftText>
                     <h1>We are happy to help</h1>
@@ -432,20 +480,34 @@ function Contact() {
                             textDecoration: "none",
                             cursor: "pointer",
                             color: "#ffffff",
+                            marginRight: "5px",
                           }}
                         >
                           +92 51 8311621
                         </a>
-                        /{" "}
+                        {"   "}/{" "}
                         <a
                           href="tel:+923111444226"
                           style={{
                             textDecoration: "none",
                             cursor: "pointer",
                             color: "#ffffff",
+                            marginRight: "5px",
                           }}
                         >
                           +923 111 444 226
+                        </a>{" "}
+                        {"   "}/{" "}
+                        <a
+                          href="tel:+971529755486"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "#ffffff",
+                            marginRight: "5px",
+                          }}
+                        >
+                          +971 5297 55486{" "}
                         </a>
                       </span>
                     </LeftInfoRow>
@@ -476,6 +538,22 @@ function Contact() {
                         Pakistan
                       </span>
                     </LeftInfoRow>
+                    <LeftInfoRow>
+                      <HiOutlineLocationMarker
+                        style={{ color: "#ffff", fontSize: "25px" }}
+                      />{" "}
+                      <span style={{ paddingLeft: "10px" }}>
+                        D-49/1, Block 2, Clifton, Karachi 75600, Pakistan
+                      </span>
+                    </LeftInfoRow>
+                    <LeftInfoRow>
+                      <HiOutlineLocationMarker
+                        style={{ color: "#ffff", fontSize: "25px" }}
+                      />{" "}
+                      <span style={{ paddingLeft: "10px" }}>
+                        Dubai Office: P.O. Box 4650, Dubai, UAE
+                      </span>
+                    </LeftInfoRow>
                   </LeftInfo>
                   <LeftSocial>
                     <p>Follow Us</p>
@@ -487,7 +565,16 @@ function Contact() {
                         rel="noreferrer"
                       >
                         <AiFillLinkedin
-                          style={{ fontSize: "25px", color: "white" }}
+                          onMouseEnter={() => {
+                            setHover(true);
+                          }}
+                          onMouseLeave={() => {
+                            setHover(false);
+                          }}
+                          style={{
+                            fontSize: "25px",
+                            color: hover ? "red" : "ffffff",
+                          }}
                         />
                       </SocialLink>
                       <SocialLink
@@ -497,7 +584,16 @@ function Contact() {
                         rel="noreferrer"
                       >
                         <FaFacebook
-                          style={{ fontSize: "25px", color: "white" }}
+                          onMouseEnter={() => {
+                            setHover2(true);
+                          }}
+                          onMouseLeave={() => {
+                            setHover2(false);
+                          }}
+                          style={{
+                            fontSize: "25px",
+                            color: hover2 ? "red" : "ffffff",
+                          }}
                         />
                       </SocialLink>
                       <SocialLink
@@ -507,7 +603,16 @@ function Contact() {
                         rel="noreferrer"
                       >
                         <FiInstagram
-                          style={{ fontSize: "25px", color: "white" }}
+                          onMouseEnter={() => {
+                            setHover3(true);
+                          }}
+                          onMouseLeave={() => {
+                            setHover3(false);
+                          }}
+                          style={{
+                            fontSize: "25px",
+                            color: hover3 ? "red" : "ffffff",
+                          }}
                         />
                       </SocialLink>
                       <SocialLink
@@ -517,7 +622,16 @@ function Contact() {
                         rel="noreferrer"
                       >
                         <AiFillYoutube
-                          style={{ fontSize: "25px", color: "white" }}
+                          onMouseEnter={() => {
+                            setHover4(true);
+                          }}
+                          onMouseLeave={() => {
+                            setHover4(false);
+                          }}
+                          style={{
+                            fontSize: "25px",
+                            color: hover4 ? "red" : "ffffff",
+                          }}
                         />
                       </SocialLink>
                     </LeftSocialIcons>
@@ -548,7 +662,6 @@ function Contact() {
                       id="w3review"
                       name="message"
                       rows="5"
-                      cols="50"
                     ></FormTextArea>
                   </FormGroup>
                   <FormGroup>
@@ -559,9 +672,9 @@ function Contact() {
             </ContactFormRow>
           </CotactFormWrapper>
           <ContactMapWrapper>
-            <iframe
+            {/* <iframe
               title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7670703103813!2d73.08881451520288!3d33.585396580735505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzA3LjQiTiA3M8KwMDUnMjcuNiJF!5e0!3m2!1sen!2s!4v1627585247818!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13295.035751139894!2d73.0906302!3d33.5856077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f4825266821a100!2sNEOTEK!5e0!3m2!1sen!2s!4v1633075992002!5m2!1sen!2s"
               height="100%"
               style={{
                 border: 0,
@@ -571,6 +684,19 @@ function Contact() {
               }}
               allowFullScreen=""
               loading="lazy"
+            ></iframe> */}
+
+            <iframe
+              title="Google Maps"
+              width="85%"
+              height="100%"
+              style={{
+                border: 0,
+                borderRadius: "20px",
+              }}
+              loading="lazy"
+              allowFullScreen
+              src="https://www.google.com/maps/embed/v1/search?q=Neotek%20Pakistan%2C%20Street%2012%2C%20Chaklala%20Scheme%203%20Chaklala%20Housing%20Scheme%203%2C%20Rawalpindi%2C%20Pakistan&key=AIzaSyBt3l8MGfOtrtjwar-u4TDqaW7LUoizTpM"
             ></iframe>
           </ContactMapWrapper>
         </ContactContentWrapper>

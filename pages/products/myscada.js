@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const myscada = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,7 +21,7 @@ const myscada = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, myscada, scada, automation, automation, plc, hmi,"
+          content="Neotek Pakistan, myscada pakistan, scada pakistan, automation pakistan, plc pakistan, hmi pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="myscada" />

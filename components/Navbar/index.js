@@ -4,13 +4,19 @@ import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "../../public/Logo.png";
 import styled from "styled-components";
-import { Link } from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Dropdown from "./Dropdown";
 
 const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#333333" : "transparent")};
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: ${({ scrollNav }) =>
+    scrollNav
+      ? "0px 10px 33px 0px rgba(0, 0, 0, 0.75)"
+      : "0px 5px 10px 0px rgba(0, 0, 0, 0.15);"};
+  backdrop-filter: blur(80px);
   height: 80px;
   display: flex;
   align-items: center;
@@ -100,6 +106,9 @@ const NavLinks = styled.a`
   &.active {
     border-bottom: 5px solid #650004;
   }
+  &:hover {
+    color: #650004;
+  }
 `;
 
 const NavBtn = styled.nav`
@@ -113,7 +122,7 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled.a`
   border-radius: 50px;
-  background: #650004;
+  background: #333333;
   white-space: nowrap;
   padding: 10px 22px;
   color: #fff;
@@ -126,8 +135,8 @@ const NavBtnLink = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #650004;
+    background: #650004;
+    color: #ffffff;
     border: 1px solid #650004;
   }
 `;
@@ -174,62 +183,81 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{}}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo href="/" onClick={toggleHome}>
-              <Image src={logo} alt="Neotek" height="45px" width="150px" />
-            </NavLogo>
+            <Link href="/" passHref>
+              <NavLogo onClick={toggleHome}>
+                <Image src={logo} alt="Neotek" height="45px" width="150px" />
+              </NavLogo>
+            </Link>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks
-                  href="/about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  // exact={true}
-                  offset={-80}
-                >
-                  About
-                </NavLinks>
+                <Link href="/about" passHref>
+                  <NavLinks
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    // exact={true}
+                    offset={-80}
+                  >
+                    About{" "}
+                  </NavLinks>
+                </Link>
               </NavItem>
               <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                <NavLinks
-                  href="/products"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  // exact={true}
-                  offset={-80}
-                >
-                  Products
-                  <RiArrowDropDownLine style={{ fontSize: "1.8rem" }} />
-                </NavLinks>
+                <Link href="#" passHref>
+                  <NavLinks
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    // exact={true}
+                    offset={-80}
+                  >
+                    Products
+                    <RiArrowDropDownLine style={{ fontSize: "1.8rem" }} />
+                  </NavLinks>
+                </Link>
                 {dropdown && <Dropdown />}
               </NavItem>
               <NavItem>
-                <NavLinks
-                  href="/services"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  // exact={true}
-                  offset={-80}
-                >
-                  Services
-                </NavLinks>
+                <Link href="/services" passHref>
+                  <NavLinks
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    // exact={true}
+                    offset={-80}
+                  >
+                    Services
+                  </NavLinks>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLinks
-                  href="/contact"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  // exact={true}
-                  offset={-80}
-                >
-                  Contact
-                </NavLinks>
+                <Link href="/contact" passHref>
+                  <NavLinks
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    // exact={true}
+                    offset={-80}
+                  >
+                    Contact
+                  </NavLinks>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/blog" passHref>
+                  <NavLinks
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    // exact={true}
+                    offset={-80}
+                  >
+                    Blog
+                  </NavLinks>
+                </Link>
               </NavItem>
               {/* <NavItem>
                             <NavLinks to='signup'>Sign Up</NavLinks>

@@ -3,11 +3,24 @@ export const prodObjOne = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
+  bg: require("../../public/thermo-background.png"),
   topLine: "",
   headline: "Thermo Fisher Scientific",
   description:
-    "Thermo Fisher Scientific Inc. (NYSE: TMO) is the world leader in serving science, with annual revenue exceeding $30 billion. Our Mission is to enable our customers to make the world healthier, cleaner and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies or increasing productivity in their laboratories, we are here to support them. Our global team of more than 80,000 colleagues delivers an unrivaled combination of innovative technologies, purchasing convenience and pharmaceutical services through our industry-leading brands, including Thermo Scientific, Applied Biosystems, Invitrogen, Fisher Scientific, Unity Lab Services and Patheon.",
-  buttonLabel: "Our Portfolio",
+    "Neotek is the Authorized Distributor for Thermo Fisher Scientific's Handheld Analytical Instruments. Thermo Fisher Scientific Inc. (NYSE: TMO) is the world leader in serving science, with annual revenue exceeding $30 billion. Our Mission is to enable our customers to make the world healthier, cleaner and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies or increasing productivity in their laboratories, we are here to support them. Our global team of more than 80,000 colleagues delivers an unrivaled combination of innovative technologies, purchasing convenience and pharmaceutical services through our industry-leading brands, including Thermo Scientific, Applied Biosystems, Invitrogen, Fisher Scientific, Unity Lab Services and Patheon.",
+  buttonLabel: "More Products",
+  item1name: "1064Defender Raman Analyzer",
+  item1description:
+    "Perform narcotics identification and chemical identification safely and quickly with the Thermo Scientific 1064Defender Raman Analyzer. The handheld 1064Defender analyzer is a truly flexible tool to meet your agency’s chemical identification needs. By offering user configurable scan profiles and libraries, the 1064Defender Raman Analyzer removes the guess work and provides actionable results for confident and efficient decision making.",
+  item1image: require("../../public/1064.png"),
+  item2name: "Harshaw TLD™ Model 8800 Plus Automatic Card Reader Instruments",
+  item2description:
+    "Successfully manage large scale thermoluminescence dosimetry (TLD) lab operations with an automated solution to monitor every employee. The Thermo Scientific™ Harshaw™ TLD Model 8800 Plus Automatic Card Reader provides high-capacity evaluation of whole body, neutron and environmental TLD cards and extremity dosimeters on carrier cards. Designed for large facilities requiring high-volume personnel monitoring, the field-proven Harshaw TLD Model 8800 Plus system reads a carousel containing up to 1400 four-element cards at 140 cards per hour. A unique chain-of-custody tracks and maintains records.",
+  item2image: require("../../public/harshaw8800.png"),
+  item3name: "Gemini™ Raman and FTIR Chemical Analyzer with LowDoseID",
+  item3description:
+    "Identify a broad range of unknown chemicals and explosives in the field quickly, safely, and confidently using FTIR and Raman spectroscopy in a single instrument, including low concentration analysis. The Thermo Scientific™ Gemini™ Analyzer with LowDoseID is the first to integrate these complementary and confirmatory chemical identification techniques in a rugged, lightweight, handheld solution. Available with the HazMasterG3™ decision support system from Alluviam LLC, Gemini gives military personnel, bomb technicians, hazmat teams and first responders significant tactical advantage, helping them minimize time on target and confidently make life-saving decisions.",
+  item3image: require("../../public/Gemini.png"),
   imgStart: true,
   img: require("../../public/thermo-logo-hd.png"),
   alt: "thermo",
@@ -34,9 +47,10 @@ export const prodObjTwo = {
   lightTextDesc: false,
   topLine: "",
   headline: "Honeywell Safety and Productivty",
+  bg: require("../../public/honeywell-background.png"),
   description:
-    "Honeywell Safety and Productivity Solutions (SPS) provides products, software and connected solutions that improve productivity, workplace safety and asset performance for our customers across the globe. We deliver on this promise through industry-leading mobile devices, software, cloud technology and automation solutions, the broadest range of personal protective equipment and gas detection technology, and custom-engineered sensors, switches and controls. We also manufacture and sell a broad portfolio of footwear for work, play and outdoor activities, including XTRATUF® and Muck Boot® brand footwear. SPS is a strategic business unit of Honeywell, a Fortune 100 technology company that delivers industry specific solutions that include aerospace products and services; control technologies for buildings and industry; and performance materials globally. Honeywell technologies help aircraft, buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable",
-  buttonLabel: "Our Portfolio",
+    "Neotek is the Authorized Distributor of Honeywell Gas Detection Portfolio for Pakistan. Honeywell Safety and Productivity Solutions (SPS) provides products, software and connected solutions that improve productivity, workplace safety and asset performance for our customers across the globe. We deliver on this promise through industry-leading mobile devices, software, cloud technology and automation solutions, the broadest range of personal protective equipment and gas detection technology, and custom-engineered sensors, switches and controls. We also manufacture and sell a broad portfolio of footwear for work, play and outdoor activities, including XTRATUF® and Muck Boot® brand footwear. SPS is a strategic business unit of Honeywell, a Fortune 100 technology company that delivers industry specific solutions that include aerospace products and services; control technologies for buildings and industry; and performance materials globally. Honeywell technologies help aircraft, buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/honeywell-logo-hd.png"),
   alt: "honeywell",
@@ -53,6 +67,18 @@ export const prodObjTwo = {
     "Disposable Gas Detectors",
     "Area Monitoring Solutions",
   ],
+  item1name: "Portable Gas Detectors",
+  item1description:
+    "A wide range of portable gas detectors offering real-time visibility of your workers’ safety status. BW™ Solo, ToxiRAE, MicroRAE and more. Portable gas detectors. Safety, compliance and productivity. Accidental gas leaks pose a considerable threat to properties, environment and human life. Therefore, Honeywell Analytics and BW™ Technologies manufacture and produce a full and comprehensive range of portable gas detectors, offered in compact, lightweight designs – from simple alarm-only units to advanced, fully configurable and serviceable instruments. Ideal for confined spaces, spot leak testing and mobile use, Honeywell’s portable gas detectors provide real-time visibility into the status and safety of hazardous-area workers, helping companies respond faster, more knowingly and decisively to safety incidents. Applications include underground utility vaults, boiler rooms, post-fire sites, sewers, industrial plants, industrial hygiene, first responder crews and remote fleets.",
+  item1image: require("../../public/pgd.png"),
+  item2name: "Commercial Gas Detection",
+  item2description:
+    "Various gas detection solutions designed for use in commercial buildings, shopping centers, office towers, universities and more. Save Seconds – Save Lives! Safety failings lead to tragic consequences. In gas detection, every second counts and choosing the right gas detection solution is a key challenge for safety professionals who can’t afford to get it wrong. With over 50 years’ experience in the industry, Honeywell has been influential in gas detection since the very beginning. Honeywell’s historic products set new benchmarks for gas detection in terms of performance, ease of use and innovation. Today, Honeywell’s gas leak detectors have evolved to meet the requirements of diverse industries and applications, delivering comprehensive solutions designed to drive down the cost of gas detection, while providing enhanced safety and peace of mind. Detect gas leaks as they happen and make fast and informed decisions in case of any gas leak emergency.",
+  item2image: require("../../public/cgd.jpeg"),
+  item3name: "Industrial Fixed",
+  item3description:
+    "A wide range of industrial fixed gas detectors featuring flexible integration, simple installation, user-friendly operation and straight-forward maintenance. Gas Detection – A Whole New Control Experience. Gas leaks are a constant threat for industrial plants, their employees and people living nearby. Worldwide incidents, involving asphyxiation or explosions are a constant reminder of this problem. When fast and informed decisions make the difference between life and death, you need full control of your gas detection system. It’s easier than ever to ensure safety and compliance, while also reducing setup and operation time and minimizing the need for training. With Honeywell’s industrial gas detectors, you never have to trade off on the flexibility or reliability of your control system, making the best decisions at a glance. Take your gas detection experience to the next level with Honeywell’s industrial gas detectors.",
+  item3image: require("../../public/igd.jpg"),
 };
 
 export const prodObjThree = {
@@ -62,9 +88,10 @@ export const prodObjThree = {
   lightTextDesc: false,
   topLine: "",
   headline: "VWR A part of Avantor",
+  bg: require("../../public/vwr-background.jpg"),
   description:
-    "As the delivery channel of Avantor®, a Fortune 500 company, VWR provides access to mission-critical product and service solutions across life sciences and other regulated industries, including: Pharmaceutical, biotechnology, industrial, education, government, healthcare and advanced technologies. We offer an integrated, seamless purchasing experience that is optimized for the way our customers do business and supported by a strong global distribution network. Our global e-commerce platform gives you easy, convenient access to an extensive portfolio, including our own brands, as well as those from thousands of other manufacturers. Avantor is a trusted global partner to customers and suppliers in the life sciences and advanced technologies & applied materials industries. We set science in motion to create a better world.",
-  buttonLabel: "Our Portfolio",
+    "Neotek is an Authorized Distributor of VWR for Pakistan. As the delivery channel of Avantor®, a Fortune 500 company, VWR provides access to mission-critical product and service solutions across life sciences and other regulated industries, including: Pharmaceutical, biotechnology, industrial, education, government, healthcare and advanced technologies. We offer an integrated, seamless purchasing experience that is optimized for the way our customers do business and supported by a strong global distribution network. Our global e-commerce platform gives you easy, convenient access to an extensive portfolio, including our own brands, as well as those from thousands of other manufacturers. Avantor is a trusted global partner to customers and suppliers in the life sciences and advanced technologies & applied materials industries. We set science in motion to create a better world.",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/vwr-logo-hd.png"),
   alt: "vwr",
@@ -80,6 +107,20 @@ export const prodObjThree = {
     "Extensive Literature",
     "NIST Tracebility",
   ],
+  item1name: "Analytical Chemistry Solutions",
+  item1description:
+    "No matter what methods or technology you use, Avantor offers a comprehensive catalog of the equipment, reagents, chemicals, consumables, tools, and other products you need every day. We have everything labs need for industrial, academic or government applications. Avantor carries a broad range of products to meet the specialized needs of analytical chemistry laboratories. We offer high-quality products from the world’s most trusted brands to help you and your colleagues answer the most challenging questions in biomedical research, environmental and forensic work, clinical diagnostics, and other materials science applications." +
+    "\n" +
+    "Mass Spectrometry | High Performance Liquid Chromatography | Low Pressure Chromatography | Gas Chromatography | Atomic Spectroscopy | Molecular Spectroscopy Instruments | Karl Fischer Reagents for Moisture Analysis | Titration | pH & Conductivity Measurement",
+  item1image: require("../../public/ac.jpg"),
+  item2name: "Life Science",
+  item2description:
+    "Life sciences are a wide-ranging field that includes many applications and specialties. Avantor can help equip your life sciences lab with the products, equipment and supplies you’ll need whether you work in cell biology, genomics, proteomics, or other fields. We carry millions of products from brands you trust so you can choose what’s best for you. Life Sciences Disciplines and Workflows: Avantor offers products, equipment, supplies, and services for specific disciplines and workflows within life sciences. Learn how Avantor can help you get everything you need to pursue your work. Cell Biology | Genomics | Proteomics",
+  item2image: require("../../public/ls.jpg"),
+  item3name: "Biopharma Production",
+  item3description:
+    "Avantor’s bioprocessing solutions focus on what matters most for your operations. We provide a unique combination of industry expertise with the broadest portfolio of products and materials engineered and manufactured to satisfy the highest quality standards and regulatory requirements for your final product – whether it is a vaccine, monoclonal antibody, recombinant protein, cell therapy, or gene therapy. As Avantor’s channel brand, VWR, part of Avantor provides you with an integrated, seamless purchasing experience that is optimized for the way you do business. Access top industry brands through VWR, part of Avantor for an even broader selection of media components, animal sera, buffers, process biochemicals, excipients and single-use solutions to address upstream and downstream processes as well as final fill formulations.",
+  item3image: require("../../public/bp.jpg"),
 };
 export const prodObjFour = {
   id: "onqsoft",
@@ -88,9 +129,10 @@ export const prodObjFour = {
   lightTextDesc: false,
   topLine: "",
   headline: "OnQ Soft QLIMS",
+  bg: require("../../public/qlims-background.png"),
   description:
-    "OnQ Software are LIMS experts with a proven track record in delivering real benefits for laboratories around the globe. OnQ Software is Australia’s only locally owned LIMS provider. But our uniqueness isn’t in our location, it’s in our process.  From training, to implementation, servicing and updating, our team will work with you every step of the way.",
-  buttonLabel: "Our Portfolio",
+    "OnQ Software are LIMS experts with a proven track record in delivering real benefits for laboratories around the globe. OnQ Software is Australia’s only locally owned LIMS provider. But our uniqueness isn’t in our location, it’s in our process.  From training, to implementation, servicing and updating, our team will work with you every step of the way. LIMS is just the starting point for your informatics platform. QLIMS is designed to empower scientists and does not need software developers to implement and maintain. Start with one of our feature filled SaaS editions and scale up when and as needed.",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/qlims-logo-hd.png"),
   alt: "onqsoft",
@@ -108,6 +150,18 @@ export const prodObjFour = {
     "ISO 17025, GMP, 21 CFR Part 11",
     "Software Validation",
   ],
+  item1name: "In-Built Business Intelligence Dashboards",
+  item1description:
+    "Review management information and operational data in real-time via QLIMS’s business intelligence dashboards. Take a high level view or drill down into your laboratory data through our pre-configured BI dashboards available with the click of a button. More advanced users can build their own without leaving QLIMS.",
+  item1image: require("../../public/bi.png"),
+  item2name: "Quality Through Compliance",
+  item2description:
+    "QLIMS is used in a wide range of laboratories and industries standing up and supporting: 21 CFR Part 11/Annex 11 conformance for auditing, e-Signature and security for manufactured items under GMP | ISO 17025 | Industry standards such as GAMP | Security and data privacy to meet HIPAA, GDPR, CAP, CLIA, Privacy Shield and others | Support for Right of Access and Right to be Forgotten requests under GDPR.",
+  item2image: require("../../public/qc.jpeg"),
+  item3name: "Integration & Automation",
+  item3description:
+    "Laboratory instruments for automated result entry, ERP, finance, third party laboratories, websites… QLIMS is ready and easy to integrate! Complete API (Application Programming Interface) access means that either your own IT team or QLIMS partner network, integrations and extensions are easily accessible.",
+  item3image: require("../../public/ii.jpg"),
 };
 export const prodObjFive = {
   id: "isystems",
@@ -116,9 +170,10 @@ export const prodObjFive = {
   lightTextDesc: false,
   topLine: "",
   headline: "ISystems Microsoft Dynamics 365",
+  bg: require("../../public/intel-background.png"),
   description:
     "We are a leading Microsoft Dynamics partner in Central and Eastern Europe, part of the Inner Circle - the highest recognition given to only 60 out of more than 10,000 Microsoft Dynamics Partners worldwide. We know the demands of international business considering more than 495 completed implementation projects in 55+ countries. Besides the international project management methodology we use in our global deliveries, we have also gained a lot of expertise in fiscal policies in many countries in Europe, the Americas, the Middle-East and Asia.",
-  buttonLabel: "Our Portfolio",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/isystems-logo-hd.png"),
   alt: "isystems",
@@ -137,6 +192,18 @@ export const prodObjFive = {
     "GMP, 21 CFR Part 11",
     "ERP for SMEs",
   ],
+  item1name: "Dynamics 365 Business Central",
+  item1description:
+    "ERP for small and mid-size companies! Dynamics 365 Business Central, previously known as Microsoft Dynamics NAV (or Navision), is an all-in-one business management solution, designed for organizations who have outgrown their initial accounting software. As a successor of Microsoft Dynamics NAV, Dynamics 365 Business Central brings rich functionalities together with the flexibility of the Cloud, though of course, an on-prem version is available to those who prefer it. It includes a full stack of accounting and financial management capabilities, as well as sales, marketing and service module, project management, supply chain, inventory and operations management.",
+  item1image: require("../../public/dbc.png"),
+  item2name: "Dynamics 365 ERP apps",
+  item2description:
+    "ERP for big companies and international organizations! A successful business today means one that can analyze data promptly, respond to customer needs in real time and deal with challenges of turbulent market environment right away. That’s where the Dynamics 365 apps (previously structured as Microsoft Dynamics AX/Axapta) come in. They bring together the best of Microsoft technology so organizations can improve existing flows, spot and pursue new business opportunities, and stay ahead of the competition. Dynamics 365 provides ERP capabilities through a set of integrated business apps covering activities related to Manufacturing, Distribution, Supply Chain Management, Retail, Finance and other operations.",
+  item2image: require("../../public/de.png"),
+  item3name: "Dynamics 365 CRM apps",
+  item3description:
+    "Manage sales, customer service and field service operations! Ready to boost satisfaction rates? The CRM apps of Microsoft Dynamics 365 cover all aspects of the relationship management process. Being with customers, suppliers, or partners, the solution holds together the communication history and data and provides for optimal service and delivery of the superior experience. The Microsoft Dynamics 365 apps for Marketing, Sales, Project Service Automation, Customer Service, and Field Service go beyond the boundaries of a traditional relationship management system as it is a cloud-based platform constantly evolving with new functionalities and endless integration capabilities.",
+  item3image: require("../../public/dcrm.png"),
 };
 export const prodObjSix = {
   id: "myscada",
@@ -145,9 +212,10 @@ export const prodObjSix = {
   lightTextDesc: false,
   topLine: "",
   headline: "MySCADA",
+  bg: require("../../public/scada-background.png"),
   description:
-    "mySCADA is an independent European (Czech) company having over 20 years of experience in industrial automation. Based on this experience, mySCADA is trying to do business in a little different way. There is an extra space in between creation and long-term cooperation with our customers being able to react to special customer needs very fast and reliably. Throughout the whole mySCADA existence, we have worked with plenty of vendors (Siemens, ABB, Rockwell…) on many different projects. We are focused not only on development but also on expertise and application of industrial systems creating competitive advantages for our clients. To maintain high-quality standards, we develop and produce our products exclusively in Europe. Thank you for your interest in mySCADA products. Without your initiative, there is no such relevant improvement in our system!",
-  buttonLabel: "Our Portfolio",
+    "Neotek is the authorized distributor for mySCADA in Pakistan. mySCADA is an independent European (Czech) company having over 20 years of experience in industrial automation. Based on this experience, mySCADA is trying to do business in a little different way. There is an extra space in between creation and long-term cooperation with our customers being able to react to special customer needs very fast and reliably. Throughout the whole mySCADA existence, we have worked with plenty of vendors (Siemens, ABB, Rockwell…) on many different projects. We are focused not only on development but also on expertise and application of industrial systems creating competitive advantages for our clients. To maintain high-quality standards, we develop and produce our products exclusively in Europe. Thank you for your interest in mySCADA products. Without your initiative, there is no such relevant improvement in our system!",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/myscada-logo-hd.png"),
   alt: "myscada",
@@ -164,6 +232,18 @@ export const prodObjSix = {
     "Mobile App",
     "Budget Friendly",
   ],
+  item1name: "myDESIGNER",
+  item1description:
+    "THE CORE OF VISUALIZATION! myDESIGNER is a rapid development platform for creating visualizations. It is flexible and easy to use thanks to its intuitive user interface, rich component library, and many professional functions. Once you design your project, you can use it everywhere. myDESIGNER lets you create feature rich visualizations, data-logs, alarms, notifications, trends, reports, and much more. myDESIGNER has many functions to speed up project design including an integrated Tag database, master objects, parametric screens, or direct import and export to MS Excel. Once the project is created, it is ready to use on any device such as a server, tablet, or even smartphone while providing the best in class customer experience thanks to crisp scalable graphics and responsive layout. myDESIGNER is simple to use, has a steep learning curve, has a rich components library, and its integrated graphic designer calls for unlimited creativity. Along with other features, it is the most efficient and comfortable solution on the market today.",
+  item1image: require("../../public/md.png"),
+  item2name: "myPRO",
+  item2description:
+    "USER FRIENDLY VISUALIZATION! Using myPRO is easy and comfortable not only for technically oriented person, but also for people with different professional focuses. This favourite software platform is customer friendly thanks to its flexibility – works on any device, on any operating system, connects an unlimited number of users, has remote access and many more functions to make your life easier. Using myPRO, you can optimize processes and consequently increase production and decrease total costs. Undoubtedly, a great advantage is the ability to detect flaws and irregularities. In these situations, myPRO proactively notifies you, bringing time and money savings. myPRO collects any change which has been made by the employees during their shift. myPRO gives the total control of user actions including who, when, and why anyone made the change.",
+  item2image: require("../../public/mp.png"),
+  item3name: "myBOX",
+  item3description:
+    "COMPACT SOLUTION SUITABLE FOR ANY PROJECT! myBOX delivers a comprehensive solution for monitoring and control of your technology. With myBOX you get the top performance HMI/SCADA server and advanced simple to configure VPN router. All embedded in an industrial-grade package. This compact box is a perfect solution for automated operations where it is complicated or expensive to use a regular computer. Imagine you can have a full HMI / SCADA server without the installation troubles, maintenance updates, with remote connectivity, and for a price, you can afford. myBOX was built based on long experience in the field of industrial automation. You can set up your SCADA system in minutes. Just plug myBOX next to your controller, set up IP and VPN to get remote connectivity, download a project and you are all set. These compact myBOX solutions embrace the functionality of an industrial SCADA server, communication server, HMI visualization system, switch, router, and 3G/LTE modem.",
+  item3image: require("../../public/mb.png"),
 };
 export const prodObjSeven = {
   id: "perkin",
@@ -172,9 +252,10 @@ export const prodObjSeven = {
   lightTextDesc: false,
   topLine: "",
   headline: "Perkin Elmer NIR Food Analyzers",
+  bg: require("../../public/perkin-background.png"),
   description:
     "We provide innovative detection, imaging, informatics and service capabilities, with the knowledge and expertise needed to help customers gain earlier and more accurate insights to improve lives and the world around us. Detection, imaging, laboratory services, and informatics solutions serving the needs of scientists, clinicians, and patients. We deliver innovative solutions in the areas of Diagnostics, Life Sciences, and Applied Markets. Our solutions help scientists, lab professionals, and clinicians answer important questions that connect the impact of the environment on human health.",
-  buttonLabel: "Our Portfolio",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/perkin-logo-hd.png"),
   alt: "perkin",
@@ -192,6 +273,18 @@ export const prodObjSeven = {
     "Flour Analyzers",
     "Grain Analyzers",
   ],
+  item1name: "Shanghai Spectrum Instruments Co., Ltd. (SSI)",
+  item1description:
+    "SSI delivers analytical solutions and services to a wide range of research, academic, government, pharmaceutical, industrial, life sciences and chemical analysis laboratories. It's portfolio includes photoelectric colorimeters, UV-Vis spectrophotometers, atomic absorption spectrophotometers and accessories. Flame and Graphite Furnace or both options in single instrument. Fully automated and computer controlled yet budget friendly. PerkinElmer plans to build on SSI’s R&D and manufacturing capabilities in China to deliver continuous hardware and software innovations for its customers and support China’s goal of strengthening local manufacturing. This acquisition complements PerkinElmer’s leadership in atomic spectroscopy to better serve local customer needs within environmental, industrial and food markets.",
+  item1image: require("../../public/spectrum.png"),
+  item2name: "Perten Instruments",
+  item2description:
+    "Perten Instruments are a part of PerkinElmer, a global leader in analytical testing solutions. PerkinElmer offers a wide range of food analysis equipment and expertise, and Perten Instruments products are now presented on the PerkinElmer website. Food companies and their suppliers work diligently every day to ensure the safety and quality of their products and brands. From detecting harmful levels of toxins, heavy metals and pesticides, to ensuring accurate labeling and compliance with regulations around the globe, they rely on our solutions. We also provide reliable analysis solutions for evaluating the quality of raw materials prior to food processing as well as measuring for targeted nutritional content, maintaining standards for flavor and aroma, sustaining consistency, and to understand how packaging effects food.",
+  item2image: require("../../public/perten.png"),
+  item3name: "Milk and Dairy Products Analyzers",
+  item3description:
+    "The LactoScope™ is designed to address the needs of dairies and processors of all sizes to quickly and accurately analyze the key components of raw milk and other dairy products. A state-of-the art FT-IR (FourierTransform Infrared Spectroscopy) instrument with modern optics and simple to use but powerful software enables the LactoScope to test raw, standardized and processed milks, whey, cream and other dairy products. The instrument incorporates the latest mid-infrared (MIR) technology for quick measuring time of 30-45 seconds with a typical accuracy of under 1% CV. ",
+  item3image: require("../../public/lac.png"),
 };
 export const prodObjEight = {
   id: "gester",
@@ -200,9 +293,10 @@ export const prodObjEight = {
   lightTextDesc: false,
   topLine: "",
   headline: "Gester Testing Solutions",
+  bg: require("../../public/gester-background.png"),
   description:
-    "Gester Instruments Co.,LTD is professionally engaged in production and R&D of physical properties testing equipment. With more than 20 years experience in research and development,we specialize in providing the total solutions of Toys and Baby Stuff Testing Equipment, Textiles & Garments Testing Equipment, Footwear Testing Equipment, Protective and Mask Testing Equipment. GESTER Group the subsidiaries company MKM Machinery is a specialist in designing & manufacturing of Mask Making Machine.",
-  buttonLabel: "Our Portfolio",
+    "Neotek is the authorized distributor for Gester Instruments in Pakistan. Gester Instruments Co.,LTD is professionally engaged in production and R&D of physical properties testing equipment. With more than 20 years experience in research and development,we specialize in providing the total solutions of Toys and Baby Stuff Testing Equipment, Textiles & Garments Testing Equipment, Footwear Testing Equipment, Protective and Mask Testing Equipment. GESTER Group the subsidiaries company MKM Machinery is a specialist in designing & manufacturing of Mask Making Machine.",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/gester-logo-hd.png"),
   alt: "gester",
@@ -220,6 +314,18 @@ export const prodObjEight = {
     "Paper and Packaging Testing",
     "Battery Testing",
   ],
+  item1name: "Footwear Testing",
+  item1description:
+    "GESTER specializes in R&D and production of footwear testing equipment. With the right attitude and cutting edge technology, we provide most suitable testing solutions to help you to get better control of product quality. We have established long-term relationships with global SGS, Bureau Veritas, TUV, Intertek, etc. and passed the vendor review of Adidas, New Balance, PUMA and BATA to name a few",
+  item1image: require("../../public/gf.png"),
+  item2name: "Textile Testing Equipment",
+  item2description:
+    "Gester Fabric testing instruments with more than 20 years of research development and technology accumulation, has becomeS key to improve quality and productivity in textile industry. Our machines all meet with: ISO, ASTM, AATCC, BS, EN, DIN, JIS and other required standards. With economic globalization, only by strictly controlling the quality of textile products can enterprises stand out from market competition. We try to go beyond customer’s expectations and constantly develop new technology. ",
+  item2image: require("../../public/gtex.png"),
+  item3name: "Battery Testing Equipment",
+  item3description:
+    "GESTER battery testing equipment meets the standard! Tests include battery voltage withstand test, battery drop test, flammability test, temperature cycle test, short circuit test, thermal test, explosion test and environmental test etc.",
+  item3image: require("../../public/gb.png"),
 };
 export const prodObjNine = {
   id: "galvano",
@@ -228,9 +334,10 @@ export const prodObjNine = {
   lightTextDesc: false,
   topLine: "",
   headline: "Galvano Scientific Intruments",
+  bg: require("../../public/galvano-background.png"),
   description:
-    "Since 1998, we are recognized because of our good quality instruments and best services. Galvano Scientific is a trusted name throughout the country. We have electronic engineers, software engineers, chemists, pharmacists and electronic diploma holders in our team who are key of our success. Our valued clients also guide us in improving and upgrading existing models and developing new ones. We are immensely grateful to all of them for their contribution.",
-  buttonLabel: "Our Portfolio",
+    "Neotek is the authorized distributor for Galvano Scientific for Northern Region. Since 1998, we are recognized because of our good quality instruments and best services. Galvano Scientific is a trusted name throughout the country. We have electronic engineers, software engineers, chemists, pharmacists and electronic diploma holders in our team who are key of our success. Our valued clients also guide us in improving and upgrading existing models and developing new ones. We are immensely grateful to all of them for their contribution.",
+  buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/galvano-logo-hd.png"),
   alt: "galvano",
@@ -250,65 +357,17 @@ export const prodObjNine = {
     "Stability Chamber",
     "Tablet Hardness Tester",
   ],
-};
-export const servObjOne = {
-  id: "pm",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: "",
-  headline: "Preventive Maintenace",
-  description:
-    "Our team of highly trained engineers will carry out calibration & maintenance of your instruments.",
-  buttonLabel: "",
-  imgStart: true,
-  img: require("../../public/svg-2.svg"),
-  alt: "pm",
-  dark: false,
-  primary: false,
-  darkText: false,
-  noButton: true,
-  website: "https://galvanoscientific.com/products/",
-  tags: [],
+  item1name: "Tablet Dissolution Testers",
+  item1description:
+    "Quartz series comprises of high quality and feature rich TDTs which are compliant with 21 CFR and USP43. Built in audit trail and variable rpm between 25 and 250. Temperature of the waterbath is monitored by two sensors and the system is operated by a stepper motor with negligible sound and vibrations. Upto 40 methods and 200 reports can be stored. ",
+  item1image: require("../../public/gd.png"),
+  item2name: "Stability Chambers",
+  item2description:
+    "With advanced features such as WiFi connectivity and built in data logger, our stability chambers have the ability to meet individual requirements to control extensive critical testing variables. Featuring integrated microprocessor based PID controls with auto functionality to maintain temperature control of +-2C and humidity control of +-5 %RH or better. Built in alarm when the system crosses set limits of temperature & humidity.",
+  item2image: require("../../public/gs.png"),
+  item3name: "Column Oven for HPLC",
+  item3description:
+    "Vertical design, elegant look, microprocessor controlled. LED display for temperature reading. Can accommodate 2 columsn of 300mm length, Small footprint with safety fuse, precise temperature control, double jacket body and magnetic doors for quick and easy operation. Can be connected to any HPLC.",
+  item3image: require("../../public/gco.png"),
 };
 
-export const servObjTwo = {
-  id: "sc",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: "",
-  headline: "Service Contracts",
-  description:
-    "Renewable Yearly Contracts for all your calibration & servicing needs to ensure hassle free operations",
-  buttonLabel: "",
-  imgStart: false,
-  img: require("../../public/svg-3.svg"),
-  alt: "sc",
-  dark: true,
-  primary: true,
-  darkText: true,
-  noButton: true,
-  website: "https://galvanoscientific.com/products/",
-  tags: [],
-};
-export const servObjThree = {
-  id: "md",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: "",
-  headline: "Method Development",
-  description:
-    "We can help you in development of methods per internationally accepted practices",
-  buttonLabel: "",
-  imgStart: true,
-  img: require("../../public/svg-6.svg"),
-  alt: "md",
-  dark: false,
-  primary: false,
-  darkText: false,
-  noButton: true,
-  website: "https://galvanoscientific.com/products/",
-  tags: [],
-};

@@ -5,7 +5,7 @@ import { prodObjSeven } from "../../components/ProductPage/Data";
 import CallTOAction from "../../components/CallToAction";
 const perkin = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div >
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -20,7 +20,7 @@ const perkin = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, Perkin Elmer, HPLC, GC-MS, LC-MS, Clarus"
+          content="Neotek Pakistan, Perkin Elmer pakistan, HPLC pakistan, GC-MS pakistan, LC-MS pakistan, Clarus pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="perkin" />

@@ -6,7 +6,7 @@ import CallTOAction from "../../components/CallToAction";
 
 const honeywell = () => {
   return (
-    <div style={{ marginTop: "-100px" }}>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
@@ -21,7 +21,7 @@ const honeywell = () => {
         />
         <meta
           name="keywords"
-          content="Neotek Pakistan, Honeywell, SPS, FSI, BW Ultra, Rae, gas detection, safety"
+          content="Neotek Pakistan, Honeywell Pakistan, SPS Pakistan, FSI Pakistan, BW Ultra Pakistan, gas detection pakistan, safety pakistan"
         />
         <meta name="robots" content="index, follow" />
         <meta name="pageName" content="honeywell" />

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import Video from "../../public/video.mp4";
 import { Button } from "../ButtonElement";
+import { motion } from "framer-motion";
 
 const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -14,6 +15,7 @@ const HeroContainer = styled.div`
   position: relative;
   z-index: 1;
   margin-top: -80px;
+  margin-bottom: 30px;
 
   :before {
     content: "";
@@ -111,48 +113,78 @@ const ArrowRight = styled(MdKeyboardArrowRight)`
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
 
+  const easing = [0.6, -0.05, 0.01, 0.99];
+
+  const fadeInUp = {
+    initial: {
+      y: 60,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.6,
+        ease: easing,
+      },
+    },
+  };
+
+  const stagger = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   const onHover = () => {
     setHover(!hover);
   };
 
   return (
-    <HeroContainer>
-      <HeroBg>
-        <VideoBg
-          autoPlay
-          loop
-          muted
-          src={require("../../public/video.mp4")}
-          type="/video/mp4"
-        />
-      </HeroBg>
-      <HeroContent>
-        <HeroH1>
-          Next Generation Analytical Instruments by Neotek Pakistan
-        </HeroH1>
-        <HeroP>
-          Large Scale, Table-top & Handheld Analytical Instruments. Field Safety
-          Instruments, Radiation Detection & Monitoring, Consumables, Chemicals
-          & Reagents, Industrial Automation and much more.
-        </HeroP>
-        <HeroBtnWrapper>
-          <Button
-            to="products"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-            smooth={true}
-            duration={500}
-            spy={true}
-            // exact={true}
-            offset={-80}
-          >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
-        </HeroBtnWrapper>
-      </HeroContent>
-    </HeroContainer>
+    <motion.div initial="initial" animate="animate">
+      <HeroContainer>
+        <HeroBg>
+          <VideoBg
+            autoPlay
+            loop
+            muted
+            src={require("../../public/video.mp4")}
+            type="/video/mp4"
+          />
+        </HeroBg>
+
+        <HeroContent>
+          <motion.div variants={fadeInUp}>
+            <HeroH1>
+              Next Generation Analytical Instruments by Neotek Pakistan
+            </HeroH1>
+          </motion.div>
+          <HeroP>
+            Large Scale, Table-top & Handheld Analytical Instruments. Field
+            Safety Instruments, Radiation Detection & Monitoring, Consumables,
+            Chemicals & Reagents, Industrial Automation and much more.
+          </HeroP>
+          <HeroBtnWrapper>
+            <Button
+              to="products"
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact={true}
+              offset={-80}
+            >
+              Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+            </Button>
+          </HeroBtnWrapper>
+        </HeroContent>
+      </HeroContainer>
+    </motion.div>
   );
 };
 

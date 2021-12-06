@@ -1,17 +1,18 @@
 import React from "react";
-import Icon1 from "../../public/svg-2.svg";
-import Icon2 from "../../public/svg-3.svg";
-import Icon3 from "../../public/svg-4.svg";
 import styled from "styled-components";
-import Image from "next/image";
+import ServiceCard from "./ServiceCard";
+import { Data } from "./Data";
 
 const ServicesContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #333333;
-  padding: 100px 0;
+
+  padding: 50px 0;
+  z-index: 1;
+
   @media screen and (max-width: 1000px) {
     padding-bottom: 100px;
     padding-top: 100px;
@@ -28,66 +29,37 @@ const ServicesContainer = styled.div`
 `;
 
 const ServicesWrapper = styled.div`
-  max-width: 1000px;
+  width: 70%;
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
+  padding: 50px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1150px) {
     grid-template-columns: 1fr 1fr;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
-`;
-
-const ServicesCard = styled.div`
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  max-height: 340px;
-  padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 480px) {
+    padding: 0 10px;
   }
-`;
-
-const ServicesIcon = styled.img`
-  height: 160px;
-  width: 160px;
-  margin-bottom: 10px;
 `;
 
 const ServicesH1 = styled.h2`
   font-size: 2.5rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 64px;
-
+  z-index: 2;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
-`;
-
-const ServicesH2 = styled.h3`
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #560004;
-`;
-
-const ServicesP = styled.p`
-  font-size: 1rem;
-  text-align: center;
-  color: #560004;
 `;
 
 const Services = () => {
@@ -96,30 +68,15 @@ const Services = () => {
       <ServicesContainer id="services">
         <ServicesH1>Our Services</ServicesH1>
         <ServicesWrapper>
-          <ServicesCard>
-            <Image alt="services1" src={Icon1} />
-            <ServicesH2>Preventive Maintenance</ServicesH2>
-            <ServicesP>
-              Our team of highly trained engineers will carry out calibration &
-              maintenance of your instruments
-            </ServicesP>
-          </ServicesCard>
-          <ServicesCard>
-            <Image alt="services2" src={Icon2} />
-            <ServicesH2>Service Contracts</ServicesH2>
-            <ServicesP>
-              Renewable Yearly Contracts for all your calibration & servicing
-              needs to ensure hassle free operations
-            </ServicesP>
-          </ServicesCard>
-          <ServicesCard>
-            <Image alt="services3" src={Icon3} />
-            <ServicesH2>Method Development</ServicesH2>
-            <ServicesP>
-              We can help you in development of methods per internationally
-              accepted practices
-            </ServicesP>
-          </ServicesCard>
+          {Data.map((service) => (
+            <ServiceCard
+              key={service.id}
+              href={service.href}
+              aria={service.aria}
+              alt={service.alt}
+              src={service.src}
+            />
+          ))}
         </ServicesWrapper>
       </ServicesContainer>
     </>

@@ -1,20 +1,23 @@
 .dropdown-menu {
-  background: #650004;
+  background: rgba(115, 123, 128, 0.9);
+  backdrop-filter: blur(20px);
   width: 250px;
   position: absolute;
   top: 80px;
   list-style: none;
   text-align: start;
   border-radius: 15px;
+  padding: 5px;
 }
 
 .dropdown-menu li {
-  background: #333333;
+  /* background: #737b80; */
   cursor: pointer;
 }
 
 .dropdown-menu li:hover {
   background: #650004;
+  border-radius: 15px;
 }
 
 .dropdown-menu.clicked {
