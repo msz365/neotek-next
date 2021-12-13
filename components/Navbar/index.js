@@ -16,7 +16,9 @@ const Nav = styled.nav`
     scrollNav
       ? "0px 10px 33px 0px rgba(0, 0, 0, 0.75)"
       : "0px 5px 10px 0px rgba(0, 0, 0, 0.15);"};
-  backdrop-filter: blur(80px);
+  background: ${({ scrollNav }) =>
+    scrollNav ? "rgba(132, 137, 153, 0.8)" : "rgba(132, 137, 153, 0.5)"};
+  // backdrop-filter: blur(80px);
   height: 80px;
   display: flex;
   align-items: center;
