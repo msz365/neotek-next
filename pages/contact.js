@@ -63,7 +63,7 @@ const ContactFormRow = styled.div`
   align-items: center;
   grid-template-areas: "col1 col2";
   background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
@@ -87,7 +87,9 @@ const ContactFormLeft = styled(motion.div)`
   height: auto;
   border-radius: 10px;
   margin-left: -10px;
-  border: 1px solid white;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   z-index: 100;
@@ -95,6 +97,7 @@ const ContactFormLeft = styled(motion.div)`
     margin: 5px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
 `;
 const ContactFormRight = styled.div`
@@ -503,18 +506,6 @@ function Contact() {
                         >
                           +923 111 444 226
                         </a>{" "}
-                        {"   "}/{" "}
-                        <a
-                          href="tel:+971529755486"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "#ffffff",
-                            marginRight: "5px",
-                          }}
-                        >
-                          +971 5297 55486{" "}
-                        </a>
                       </span>
                     </LeftInfoRow>
                     <LeftInfoRow>

@@ -16,6 +16,7 @@ const InfoWrapper = styled.div`
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   display: grid;
   z-index: 3;
   width: 70%;
@@ -111,33 +112,33 @@ const Img = styled.img`
 const CallToAction = styled.div`
   position: relative;
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 50px;
+
   align-items: center;
   justify-content: center;
 
-  :before {
-    content: "";
-    position: absolute;
-    box-shadow: inset 0 0 0 2000px rgba(51, 51, 51, 0.7);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  // :before {
+  //   content: "";
+  //   position: absolute;
+  //   box-shadow: inset 0 0 0 2000px rgba(51, 51, 51, 0.7);
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
 
-    z-index: 0;
-  }
+  //   z-index: 0;
+  // }
 `;
 const CtaCont = styled.div`
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 60%;
-  margin: 30px;
-
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
+  width: 70vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 45px;
+  background: rgba(132, 137, 153, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
   @media screen and (max-width: 480px) {
     width: 80%;
   }
@@ -227,14 +228,7 @@ const PorductPage = ({
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
-        <CallToAction
-          style={{
-            backgroundImage: `url(${bg.default.src})`,
-            backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "cover",
-          }}
-        >
+        <CallToAction>
           <CtaCont>
             <CtaImg>
               <Image

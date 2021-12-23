@@ -1,36 +1,26 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
-import Video from "../../public/video.mp4";
+// import Video from "../../public/video.mp4";
 import { Button } from "../ButtonElement";
 import { motion } from "framer-motion";
 
 const HeroContainer = styled.div`
-  background: #0c0c0c;
+  // background: #0c0c0c;
   display: flex;
-  justify-content: center;
+
   align-items: center;
-  padding: 0 30px;
-  height: 935px;
+  padding: 0 100px;
+  height: 100vh;
   position: relative;
   z-index: 1;
-  margin-top: -80px;
+  width: 50%;
   margin-bottom: 30px;
 
-  :before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+    width: 80%;
+    justify-content: center;
   }
 `;
 
@@ -60,13 +50,14 @@ const HeroContent = styled.div`
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  @media and screen(max-width:768px) {
+    align-items: center;
+  }
 `;
 
 const HeroH1 = styled.h1`
   color: #fff;
   font-size: 48px;
-  text-align: center;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -81,8 +72,10 @@ const HeroP = styled.p`
   margin-top: 24px;
   color: #fff;
   font-size: 24px;
-  text-align: center;
+
   max-width: 600px;
+  text-align: justify;
+  text-justify: inter-word;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;
@@ -97,7 +90,7 @@ const HeroBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const ArrowForward = styled(MdArrowForward)`
@@ -145,16 +138,6 @@ const HeroSection = () => {
   return (
     <motion.div initial="initial" animate="animate">
       <HeroContainer>
-        <HeroBg>
-          <VideoBg
-            autoPlay
-            loop
-            muted
-            src={require("../../public/video.mp4")}
-            type="/video/mp4"
-          />
-        </HeroBg>
-
         <HeroContent>
           <motion.div variants={fadeInUp}>
             <HeroH1>

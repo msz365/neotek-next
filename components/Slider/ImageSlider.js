@@ -10,12 +10,23 @@ const SliderContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   color: white;
-  padding: 60px;
 `;
 const SliderWrapper = styled.div`
-  width: 80%;
-  padding: 20px;
-  margin: 40px;
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  width: 70%;
+  padding: 50px;
+  padding-bottom: 70px;
+  margin: 50px;
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+    padding-bottom: 70px;
+    width: 80%;
+    justify-content: center;
+  }
 `;
 const Heading = styled.h2`
   font-size: 2.5rem;

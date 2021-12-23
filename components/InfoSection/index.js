@@ -22,6 +22,7 @@ const InfoWrapper = styled.div`
   box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   display: grid;
   z-index: 3;
   width: 70vw;
@@ -31,9 +32,9 @@ const InfoWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   @media screen and (max-width: 480px) {
-    padding:20px;
-    margin:20px;
-    width:auto;
+    padding: 20px;
+    margin: 20px;
+    width: auto;
   }
 `;
 

@@ -15,6 +15,8 @@ const CtaWrapper = styled.div`
 
 const CtaContent = styled.div`
   width: 70%;
+
+  backdrop-filter: blur(10px);
   margin-right: auto;
   margin-left: auto;
   display: flex;
