@@ -147,7 +147,7 @@ function CallToAction() {
     <CtaWrapper>
       <CtaContent>
         <CtaTop>
-          <h2>Find us on Dun & Bradsheet</h2>
+          {/* <h2>Find us on Dun & Bradsheet</h2>
           <a
             href="https://www.dnb.com/business-directory/company-profiles.neotech_suppliers_(pvt)_limited.54aef4857b4af815017300433d704eaa.html"
             target="_blank"
@@ -161,7 +161,7 @@ function CallToAction() {
                 height={100}
               />
             </ImageContainer>
-          </a>
+          </a> */}
           <h3 style={{ fontWeight: "50" }}>
             Are you ready to take your business to the next level with
             technology?

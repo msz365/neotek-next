@@ -3,7 +3,7 @@ export const prodObjOne = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  bg: require("../../public/thermo-background.png"),
+  bg: "",
   topLine: "",
   headline: "Thermo Fisher Scientific",
   description:
@@ -47,7 +47,7 @@ export const prodObjTwo = {
   lightTextDesc: false,
   topLine: "",
   headline: "Honeywell Safety and Productivty",
-  bg: require("../../public/honeywell-background.png"),
+  bg: "",
   description:
     "Neotek is the Authorized Distributor of Honeywell Gas Detection Portfolio for Pakistan. Honeywell Safety and Productivity Solutions (SPS) provides products, software and connected solutions that improve productivity, workplace safety and asset performance for our customers across the globe. We deliver on this promise through industry-leading mobile devices, software, cloud technology and automation solutions, the broadest range of personal protective equipment and gas detection technology, and custom-engineered sensors, switches and controls. We also manufacture and sell a broad portfolio of footwear for work, play and outdoor activities, including XTRATUF® and Muck Boot® brand footwear. SPS is a strategic business unit of Honeywell, a Fortune 100 technology company that delivers industry specific solutions that include aerospace products and services; control technologies for buildings and industry; and performance materials globally. Honeywell technologies help aircraft, buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable",
   buttonLabel: "More Products",
@@ -88,7 +88,7 @@ export const prodObjThree = {
   lightTextDesc: false,
   topLine: "",
   headline: "VWR A part of Avantor",
-  bg: require("../../public/vwr-background.jpg"),
+  bg: "",
   description:
     "Neotek is an Authorized Distributor of VWR for Pakistan. As the delivery channel of Avantor®, a Fortune 500 company, VWR provides access to mission-critical product and service solutions across life sciences and other regulated industries, including: Pharmaceutical, biotechnology, industrial, education, government, healthcare and advanced technologies. We offer an integrated, seamless purchasing experience that is optimized for the way our customers do business and supported by a strong global distribution network. Our global e-commerce platform gives you easy, convenient access to an extensive portfolio, including our own brands, as well as those from thousands of other manufacturers. Avantor is a trusted global partner to customers and suppliers in the life sciences and advanced technologies & applied materials industries. We set science in motion to create a better world.",
   buttonLabel: "More Products",
@@ -129,7 +129,7 @@ export const prodObjFour = {
   lightTextDesc: false,
   topLine: "",
   headline: "OnQ Soft QLIMS",
-  bg: require("../../public/qlims-background.png"),
+  bg: "",
   description:
     "OnQ Software are LIMS experts with a proven track record in delivering real benefits for laboratories around the globe. OnQ Software is Australia’s only locally owned LIMS provider. But our uniqueness isn’t in our location, it’s in our process.  From training, to implementation, servicing and updating, our team will work with you every step of the way. LIMS is just the starting point for your informatics platform. QLIMS is designed to empower scientists and does not need software developers to implement and maintain. Start with one of our feature filled SaaS editions and scale up when and as needed.",
   buttonLabel: "More Products",
@@ -170,7 +170,7 @@ export const prodObjFive = {
   lightTextDesc: false,
   topLine: "",
   headline: "ISystems Microsoft Dynamics 365",
-  bg: require("../../public/intel-background.png"),
+  bg: "",
   description:
     "We are a leading Microsoft Dynamics partner in Central and Eastern Europe, part of the Inner Circle - the highest recognition given to only 60 out of more than 10,000 Microsoft Dynamics Partners worldwide. We know the demands of international business considering more than 495 completed implementation projects in 55+ countries. Besides the international project management methodology we use in our global deliveries, we have also gained a lot of expertise in fiscal policies in many countries in Europe, the Americas, the Middle-East and Asia.",
   buttonLabel: "More Products",
@@ -212,7 +212,7 @@ export const prodObjSix = {
   lightTextDesc: false,
   topLine: "",
   headline: "MySCADA",
-  bg: require("../../public/scada-background.png"),
+  bg: "",
   description:
     "Neotek is the authorized distributor for mySCADA in Pakistan. mySCADA is an independent European (Czech) company having over 20 years of experience in industrial automation. Based on this experience, mySCADA is trying to do business in a little different way. There is an extra space in between creation and long-term cooperation with our customers being able to react to special customer needs very fast and reliably. Throughout the whole mySCADA existence, we have worked with plenty of vendors (Siemens, ABB, Rockwell…) on many different projects. We are focused not only on development but also on expertise and application of industrial systems creating competitive advantages for our clients. To maintain high-quality standards, we develop and produce our products exclusively in Europe. Thank you for your interest in mySCADA products. Without your initiative, there is no such relevant improvement in our system!",
   buttonLabel: "More Products",
@@ -252,7 +252,7 @@ export const prodObjSeven = {
   lightTextDesc: false,
   topLine: "",
   headline: "Perkin Elmer NIR Food Analyzers",
-  bg: require("../../public/perkin-background.png"),
+  bg: "",
   description:
     "We provide innovative detection, imaging, informatics and service capabilities, with the knowledge and expertise needed to help customers gain earlier and more accurate insights to improve lives and the world around us. Detection, imaging, laboratory services, and informatics solutions serving the needs of scientists, clinicians, and patients. We deliver innovative solutions in the areas of Diagnostics, Life Sciences, and Applied Markets. Our solutions help scientists, lab professionals, and clinicians answer important questions that connect the impact of the environment on human health.",
   buttonLabel: "More Products",
@@ -293,7 +293,7 @@ export const prodObjEight = {
   lightTextDesc: false,
   topLine: "",
   headline: "Gester Testing Solutions",
-  bg: require("../../public/gester-background.png"),
+  bg: "",
   description:
     "Neotek is the authorized distributor for Gester Instruments in Pakistan. Gester Instruments Co.,LTD is professionally engaged in production and R&D of physical properties testing equipment. With more than 20 years experience in research and development,we specialize in providing the total solutions of Toys and Baby Stuff Testing Equipment, Textiles & Garments Testing Equipment, Footwear Testing Equipment, Protective and Mask Testing Equipment. GESTER Group the subsidiaries company MKM Machinery is a specialist in designing & manufacturing of Mask Making Machine.",
   buttonLabel: "More Products",
@@ -334,7 +334,7 @@ export const prodObjNine = {
   lightTextDesc: false,
   topLine: "",
   headline: "Galvano Scientific Intruments",
-  bg: require("../../public/galvano-background.png"),
+  bg: "",
   description:
     "Neotek is the authorized distributor for Galvano Scientific for Northern Region. Since 1998, we are recognized because of our good quality instruments and best services. Galvano Scientific is a trusted name throughout the country. We have electronic engineers, software engineers, chemists, pharmacists and electronic diploma holders in our team who are key of our success. Our valued clients also guide us in improving and upgrading existing models and developing new ones. We are immensely grateful to all of them for their contribution.",
   buttonLabel: "More Products",
@@ -370,4 +370,3 @@ export const prodObjNine = {
     "Vertical design, elegant look, microprocessor controlled. LED display for temperature reading. Can accommodate 2 columsn of 300mm length, Small footprint with safety fuse, precise temperature control, double jacket body and magnetic doors for quick and easy operation. Can be connected to any HPLC.",
   item3image: require("../../public/gco.png"),
 };
-

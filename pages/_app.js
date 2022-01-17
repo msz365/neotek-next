@@ -24,7 +24,7 @@ const App = ({ Component, pageProps }) => {
     <Layout>
       {/* Google Tag Manager - Global base code */}
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

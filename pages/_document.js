@@ -38,19 +38,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charSet="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="Content-Security-Policy" content="" />
+          <link rel="preconnect" href="https://connect.facebook.net" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
         </Head>
         <body style={{ background: "#E3E3E3" }}>
           <noscript>

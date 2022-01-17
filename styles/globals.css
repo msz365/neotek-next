@@ -4,10 +4,10 @@ body {
   margin: 0;
   font-family: "Encode Sans Expanded", sans-serif;
   /* background: #848999 !important; */
-  background: url("../public/bg.png") #011222 !important;
+  background: url("../public/bg.webp") #011222 !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
-  background-size: contain;
+  background-size: 100% !important;
 
   /* background: linear-gradient(
     63deg,
