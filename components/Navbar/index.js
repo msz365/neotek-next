@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "../../public/Logo.png";
+import logoWhite from "../../public/logoWhite.png";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,13 +13,13 @@ import Dropdown from "./Dropdown";
 const Nav = styled.nav`
   transition: all 0.2s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: ${({ scrollNav }) =>
-    scrollNav
-      ? "0px 10px 33px 0px rgba(0, 0, 0, 0.75)"
-      : "0px 5px 10px 0px rgba(0, 0, 0, 0.15);"};
+
   background: ${({ scrollNav }) =>
-    scrollNav ? "rgba(132, 137, 153, 0.8)" : "rgba(132, 137, 153, 0.5)"};
-  // backdrop-filter: blur(80px);
+    scrollNav ? "rgba(132, 137, 153, 0.8)" : "transparent"};
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   height: 80px;
   display: flex;
   align-items: center;
@@ -187,7 +188,16 @@ const Navbar = ({ toggle }) => {
           <NavbarContainer>
             <Link href="/" passHref>
               <NavLogo onClick={toggleHome}>
-                <Image src={logo} alt="Neotek" height="45px" width="150px" />
+                {scrollNav ? (
+                  <Image src={logo} alt="Neotek" height="45px" width="150px" />
+                ) : (
+                  <Image
+                    src={logoWhite}
+                    alt="Neotek"
+                    height="45px"
+                    width="150px"
+                  />
+                )}
               </NavLogo>
             </Link>
             <MobileIcon onClick={toggle}>

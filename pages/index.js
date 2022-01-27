@@ -9,6 +9,13 @@ import { useState } from "react";
 import CallToAction from "../components/CallToAction";
 import { motion } from "framer-motion";
 import ImageSlider from "../components/Slider/ImageSlider";
+import Image from "next/image";
+import { AiOutlineClose } from "react-icons/ai";
+import { ButtonR } from "../components/ButtonRElement";
+import { IoTimerOutline } from "react-icons/io5";
+import { FaMoneyBillAlt } from "react-icons/fa";
+import { BsFileCheck } from "react-icons/bs";
+import { BiError } from "react-icons/bi";
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -287,14 +294,14 @@ export default function Home() {
     lightText: false,
     lightTextDesc: false,
     topLine: "",
-    headline: "QLIMS Starter Package end of year promotion!",
-    description:
-      "Do you need a LIMS which does not cost a fortune and take months to implement?",
-    description2: "QLIMS is a real SaaS LIMS reduced to only €9,995 per year!",
-    description3: "Valid until 15th of December 2021",
+    headline: "Join us in Lahore!",
+    description: "We look forward to welcoming you at our stalls.",
+    description2:
+      "Drop in at Stall C-1 and C-2 in Hall 1 for a cup of tea and a fruitful discussion about our offerings.",
+    description3: "9 - 10th March 2022 at Expo Center Lahore.",
     buttonLabel: "More Details",
     imgStart: true,
-    img: require("../public/promotion-2021.png"),
+    img: require("../public/ppe.png"),
     alt: "promotion",
     dark: true,
     primary: true,
@@ -392,7 +399,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </Head>
-      {/* {open ? (
+      {open ? (
         <ModalOutlayWrapper onClick={() => setOpen(!open)}>
           <ModalDiv>
             <CloseWrapper>
@@ -420,7 +427,7 @@ export default function Home() {
                         {data.description3}
                       </Subtitle>
 
-                      <BtnWrap>
+                      {/* <BtnWrap>
                         <a href={data.website} target="_blank" rel="noreferrer">
                           <ButtonR
                             smooth={true}
@@ -435,7 +442,7 @@ export default function Home() {
                             {data.buttonLabel}
                           </ButtonR>
                         </a>
-                      </BtnWrap>
+                      </BtnWrap> */}
                     </TextWrapper>
                   </Column1>
                   <Column2>
@@ -445,12 +452,12 @@ export default function Home() {
                         alt={data.alt}
                         layout="responsive"
                         width={300}
-                        height={150}
+                        height={200}
                       />
                     </ImgWrap>
                   </Column2>
                 </ModalRow>
-                <TipWrapper>
+                {/* <TipWrapper>
                   <div
                     style={{
                       display: "flex",
@@ -519,41 +526,15 @@ export default function Home() {
                       </TipSubtitle>
                     </div>
                   </div>
-                </TipWrapper>
+                </TipWrapper> */}
               </ModalWrapper>
             </ModalContainer>
           </ModalDiv>
         </ModalOutlayWrapper>
       ) : (
         <div></div>
-      )} */}
-      {/* <main>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0,
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.8,
-              },
-            },
-          }}
-        >
-          <h1>
-            TEsting Framer motion Next Generation Analytical Instruments by
-            Neotek Pakistan Large Scale, Table-top & Handheld Analytical
-            Instruments. Field Safety Instruments, Radiation Detection &
-            Monitoring, Consumables, Chemicals & Reagents, Industrial Automation
-            and much more.
-          </h1>
-        </motion.div>
-      </main> */}
+      )}
+
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <Products />

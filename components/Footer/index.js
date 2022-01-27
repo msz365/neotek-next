@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "../../public/Logo.png";
 import styled from "styled-components";
-import { Link } from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 
 const FooterContainer = styled.footer`
@@ -12,16 +12,22 @@ const FooterContainer = styled.footer`
 const FooterWrap = styled.div`
   padding: 10px 24px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+  }
 `;
 
 const FooterLinksContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  // width: 100%;
+  margin-right: 20px;
 
   @media screen and (max-width: 820px) {
     padding-top: 32px;
@@ -58,7 +64,7 @@ const FooterLinkTitle = styled.h1`
   margin-bottom: 16px;
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -149,44 +155,31 @@ const Footer = () => {
     <>
       <FooterContainer>
         <FooterWrap>
-          {/* <FooterLinksContainer>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                                
-                                <FooterLink to="products">Products</FooterLink>
-                                <FooterLink to="services">About Us</FooterLink>
-                                <FooterLink to="contact">Contact</FooterLink>
-                            
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                                
-                                <FooterLink to="products">Products</FooterLink>
-                                <FooterLink to="services">About Us</FooterLink>
-                                <FooterLink to="contact">Contact</FooterLink>
-                            
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                                
-                                <FooterLink to="products">Products</FooterLink>
-                                <FooterLink to="services">About Us</FooterLink>
-                                <FooterLink to="contact">Contact</FooterLink>
-                            
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                                
-                                <FooterLink to="products">Products</FooterLink>
-                                <FooterLink to="services">About Us</FooterLink>
-                                <FooterLink to="contact">Contact</FooterLink>
-                            
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                </FooterLinksContainer> */}
+          <FooterLinksContainer>
+            <FooterLinksWrapper>
+              <FooterLinkItems>
+                <FooterLinkTitle>Menu</FooterLinkTitle>
+                <FooterLink href="/about" passHref>
+                  <a className="navitem">About Us</a>
+                </FooterLink>
+                <FooterLink href="/products" passHref>
+                  <a className="navitem">Products</a>
+                </FooterLink>
+                <FooterLink href="/services" passHref>
+                  <a className="navitem">Services</a>
+                </FooterLink>
+                <FooterLink href="/contact" passHref>
+                  <a className="navitem">Contact</a>
+                </FooterLink>
+                <FooterLink href="/blog" passHref>
+                  <a className="navitem">Blog</a>
+                </FooterLink>
+                <FooterLink href="/privacy" passHref>
+                  <a className="navitem">Privacy</a>
+                </FooterLink>
+              </FooterLinkItems>
+            </FooterLinksWrapper>
+          </FooterLinksContainer>
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to="/" onClick={toggleHome}>
