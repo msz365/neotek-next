@@ -7,7 +7,7 @@ export const prodObjOne = {
   topLine: "",
   headline: "Thermo Fisher Scientific",
   description:
-    "Neotek is the Authorized Distributor for Thermo Fisher Scientific's Handheld Analytical Instruments. Thermo Fisher Scientific Inc. (NYSE: TMO) is the world leader in serving science, with annual revenue exceeding $30 billion. Our Mission is to enable our customers to make the world healthier, cleaner and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies or increasing productivity in their laboratories, we are here to support them. Our global team of more than 80,000 colleagues delivers an unrivaled combination of innovative technologies, purchasing convenience and pharmaceutical services through our industry-leading brands, including Thermo Scientific, Applied Biosystems, Invitrogen, Fisher Scientific, Unity Lab Services and Patheon.",
+    "NEOTECH is the Authorized Distributor for Thermo Fisher Scientific's Handheld Analytical Instruments. Thermo Fisher Scientific Inc. (NYSE: TMO) is the world leader in serving science, with annual revenue exceeding $30 billion. Our Mission is to enable our customers to make the world healthier, cleaner and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies or increasing productivity in their laboratories, we are here to support them. Our global team of more than 80,000 colleagues delivers an unrivaled combination of innovative technologies, purchasing convenience and pharmaceutical services through our industry-leading brands, including Thermo Scientific, Applied Biosystems, Invitrogen, Fisher Scientific, Unity Lab Services and Patheon.",
   buttonLabel: "More Products",
   item1name: "1064Defender Raman Analyzer",
   item1description:
@@ -49,7 +49,7 @@ export const prodObjTwo = {
   headline: "Honeywell Safety and Productivty",
   bg: "",
   description:
-    "Neotek is the Authorized Distributor of Honeywell Gas Detection Portfolio for Pakistan. Honeywell Safety and Productivity Solutions (SPS) provides products, software and connected solutions that improve productivity, workplace safety and asset performance for our customers across the globe. We deliver on this promise through industry-leading mobile devices, software, cloud technology and automation solutions, the broadest range of personal protective equipment and gas detection technology, and custom-engineered sensors, switches and controls. We also manufacture and sell a broad portfolio of footwear for work, play and outdoor activities, including XTRATUF® and Muck Boot® brand footwear. SPS is a strategic business unit of Honeywell, a Fortune 100 technology company that delivers industry specific solutions that include aerospace products and services; control technologies for buildings and industry; and performance materials globally. Honeywell technologies help aircraft, buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable",
+    "NEOTECH is the Authorized Distributor of Honeywell Gas Detection Portfolio for Pakistan. Honeywell Safety and Productivity Solutions (SPS) provides products, software and connected solutions that improve productivity, workplace safety and asset performance for our customers across the globe. We deliver on this promise through industry-leading mobile devices, software, cloud technology and automation solutions, the broadest range of personal protective equipment and gas detection technology, and custom-engineered sensors, switches and controls. We also manufacture and sell a broad portfolio of footwear for work, play and outdoor activities, including XTRATUF® and Muck Boot® brand footwear. SPS is a strategic business unit of Honeywell, a Fortune 100 technology company that delivers industry specific solutions that include aerospace products and services; control technologies for buildings and industry; and performance materials globally. Honeywell technologies help aircraft, buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable",
   buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/honeywell-logo-hd.png"),
@@ -90,7 +90,7 @@ export const prodObjThree = {
   headline: "VWR A part of Avantor",
   bg: "",
   description:
-    "Neotek is an Authorized Distributor of VWR for Pakistan. As the delivery channel of Avantor®, a Fortune 500 company, VWR provides access to mission-critical product and service solutions across life sciences and other regulated industries, including: Pharmaceutical, biotechnology, industrial, education, government, healthcare and advanced technologies. We offer an integrated, seamless purchasing experience that is optimized for the way our customers do business and supported by a strong global distribution network. Our global e-commerce platform gives you easy, convenient access to an extensive portfolio, including our own brands, as well as those from thousands of other manufacturers. Avantor is a trusted global partner to customers and suppliers in the life sciences and advanced technologies & applied materials industries. We set science in motion to create a better world.",
+    "NEOTECH is an Authorized Distributor of VWR for Pakistan. As the delivery channel of Avantor®, a Fortune 500 company, VWR provides access to mission-critical product and service solutions across life sciences and other regulated industries, including: Pharmaceutical, biotechnology, industrial, education, government, healthcare and advanced technologies. We offer an integrated, seamless purchasing experience that is optimized for the way our customers do business and supported by a strong global distribution network. Our global e-commerce platform gives you easy, convenient access to an extensive portfolio, including our own brands, as well as those from thousands of other manufacturers. Avantor is a trusted global partner to customers and suppliers in the life sciences and advanced technologies & applied materials industries. We set science in motion to create a better world.",
   buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/vwr-logo-hd.png"),
@@ -214,7 +214,7 @@ export const prodObjSix = {
   headline: "MySCADA",
   bg: "",
   description:
-    "Neotek is the authorized distributor for mySCADA in Pakistan. mySCADA is an independent European (Czech) company having over 20 years of experience in industrial automation. Based on this experience, mySCADA is trying to do business in a little different way. There is an extra space in between creation and long-term cooperation with our customers being able to react to special customer needs very fast and reliably. Throughout the whole mySCADA existence, we have worked with plenty of vendors (Siemens, ABB, Rockwell…) on many different projects. We are focused not only on development but also on expertise and application of industrial systems creating competitive advantages for our clients. To maintain high-quality standards, we develop and produce our products exclusively in Europe. Thank you for your interest in mySCADA products. Without your initiative, there is no such relevant improvement in our system!",
+    "NEOTECH is the authorized distributor for mySCADA in Pakistan. mySCADA is an independent European (Czech) company having over 20 years of experience in industrial automation. Based on this experience, mySCADA is trying to do business in a little different way. There is an extra space in between creation and long-term cooperation with our customers being able to react to special customer needs very fast and reliably. Throughout the whole mySCADA existence, we have worked with plenty of vendors (Siemens, ABB, Rockwell…) on many different projects. We are focused not only on development but also on expertise and application of industrial systems creating competitive advantages for our clients. To maintain high-quality standards, we develop and produce our products exclusively in Europe. Thank you for your interest in mySCADA products. Without your initiative, there is no such relevant improvement in our system!",
   buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/myscada-logo-hd.png"),
@@ -295,7 +295,7 @@ export const prodObjEight = {
   headline: "Gester Testing Solutions",
   bg: "",
   description:
-    "Neotek is the authorized distributor for Gester Instruments in Pakistan. Gester Instruments Co.,LTD is professionally engaged in production and R&D of physical properties testing equipment. With more than 20 years experience in research and development,we specialize in providing the total solutions of Toys and Baby Stuff Testing Equipment, Textiles & Garments Testing Equipment, Footwear Testing Equipment, Protective and Mask Testing Equipment. GESTER Group the subsidiaries company MKM Machinery is a specialist in designing & manufacturing of Mask Making Machine.",
+    "NEOTECH is the authorized distributor for Gester Instruments in Pakistan. Gester Instruments Co.,LTD is professionally engaged in production and R&D of physical properties testing equipment. With more than 20 years experience in research and development,we specialize in providing the total solutions of Toys and Baby Stuff Testing Equipment, Textiles & Garments Testing Equipment, Footwear Testing Equipment, Protective and Mask Testing Equipment. GESTER Group the subsidiaries company MKM Machinery is a specialist in designing & manufacturing of Mask Making Machine.",
   buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/gester-logo-hd.png"),
@@ -336,7 +336,7 @@ export const prodObjNine = {
   headline: "Galvano Scientific Intruments",
   bg: "",
   description:
-    "Neotek is the authorized distributor for Galvano Scientific for Northern Region. Since 1998, we are recognized because of our good quality instruments and best services. Galvano Scientific is a trusted name throughout the country. We have electronic engineers, software engineers, chemists, pharmacists and electronic diploma holders in our team who are key of our success. Our valued clients also guide us in improving and upgrading existing models and developing new ones. We are immensely grateful to all of them for their contribution.",
+    "NEOTECH is the authorized distributor for Galvano Scientific for Northern Region. Since 1998, we are recognized because of our good quality instruments and best services. Galvano Scientific is a trusted name throughout the country. We have electronic engineers, software engineers, chemists, pharmacists and electronic diploma holders in our team who are key of our success. Our valued clients also guide us in improving and upgrading existing models and developing new ones. We are immensely grateful to all of them for their contribution.",
   buttonLabel: "More Products",
   imgStart: true,
   img: require("../../public/galvano-logo-hd.png"),
@@ -367,6 +367,6 @@ export const prodObjNine = {
   item2image: require("../../public/gs.png"),
   item3name: "Column Oven for HPLC",
   item3description:
-    "Vertical design, elegant look, microprocessor controlled. LED display for temperature reading. Can accommodate 2 columsn of 300mm length, Small footprint with safety fuse, precise temperature control, double jacket body and magnetic doors for quick and easy operation. Can be connected to any HPLC.",
+    "Vertical design, elegant look, microprocessor controlled. LED display for temperature reading. Can accommodate 2 columns of 300mm length, Small footprint with safety fuse, precise temperature control, double jacket body and magnetic doors for quick and easy operation. Can be connected to any HPLC.",
   item3image: require("../../public/gco.png"),
 };
