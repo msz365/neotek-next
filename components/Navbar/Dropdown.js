@@ -47,12 +47,6 @@ const MenuItems = [
     path: "/products/perkin",
     cName: "dropdown-link",
   },
-  {
-    id: 8,
-    title: "Gester Instruments",
-    path: "/products/gester",
-    cName: "dropdown-link",
-  },
 ];
 
 function Dropdown() {

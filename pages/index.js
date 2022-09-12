@@ -286,7 +286,7 @@ const TipWrapper = styled.div`
 `;
 
 export default function Home() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const data = {
     id: "qlims-promo",

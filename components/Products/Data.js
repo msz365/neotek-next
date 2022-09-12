@@ -43,16 +43,9 @@ export const Data = [
     alt: "mySCADA Automation",
     src: require("../../public/myscada-logo.png"),
   },
+
   {
     id: 6,
-
-    href: "/products/gester",
-    aria: "GESTER Quality Testing Instruments",
-    alt: "GESTER Testing Instruments",
-    src: require("../../public/gester-logo.png"),
-  },
-  {
-    id: 7,
 
     href: "/products/perkin",
     aria: "Perkin Elmer Dairy Analyzers and Atomic Absorption",
@@ -60,14 +53,14 @@ export const Data = [
     src: require("../../public/perkin-logo.png"),
   },
   {
-    id: 8,
+    id: 7,
     href: "/products/perkin",
     aria: "Perten Dough and Grain Analyzers",
     alt: "Perten Dough and Grain Analyzers",
     src: require("../../public/perten-logo.png"),
   },
   {
-    id: 9,
+    id: 8,
     href: "/products/perkin",
     aria: "Atomic Absorption & UVVIS",
     alt: "Spectrum Instruments",
